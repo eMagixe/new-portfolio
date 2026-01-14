@@ -17,6 +17,10 @@ const links = ref([
 		trailingIcon: 'i-lucide-arrow-right'
 	}
 ])
+
+definePageMeta({
+	layout: 'home'
+})
 </script>
 
 <template>
@@ -26,8 +30,9 @@ const links = ref([
 		</div>
 		<UPageBody>
 			<UPageSection
+				class="actions"
 				title="Евченко Максим"
-				description="Я - Frontend-разработчик с многолетним опытом создания современных веб-приложений. Имею навыки работы с Vue.js, Nuxt.js, TypeScript, Tailwind CSS и другими технологиями для разработки высококачественных пользовательских интерфейсов."
+				description="Frontend-разработчик с многолетним опытом создания современных веб-приложений. Имею навыки работы с Vue.js, Nuxt.js, TypeScript, Tailwind CSS и другими технологиями для разработки высококачественных пользовательских интерфейсов."
 				:links="links as ButtonProps[]"
 			/>
 			<div class="flex flex-col justify-center items-center">

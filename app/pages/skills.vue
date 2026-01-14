@@ -174,8 +174,9 @@ const secondary_skills = ref([
 			class="my-10"
 		/>
 
-		<div class="flex flex-row justify-between items-center w-full mb-10">
+		<div class="actions flex flex-row justify-between items-center w-full mb-10">
 			<UButton icon="i-lucide-arrow-left" to="/jobs" color="neutral" variant="outline">Опыт работы</UButton>
+			<p>Навыки</p>
 			<UButton trailing-icon="i-lucide-arrow-right" to="/projects" color="neutral" variant="outline"
 				>Проекты</UButton
 			>

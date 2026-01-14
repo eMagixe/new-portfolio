@@ -86,8 +86,9 @@ const items: TimelineItem[] = [
 			class="mb-10"
 		/>
 
-		<div class="flex flex-row justify-between items-center w-full mb-10">
+		<div class="actions flex flex-row justify-between items-center w-full mb-10">
 			<UButton icon="i-lucide-arrow-left" to="/" color="neutral" variant="outline">Главная</UButton>
+			<p>Опыт работы</p>
 			<UButton trailing-icon="i-lucide-arrow-right" to="/skills" color="neutral" variant="outline"
 				>Навыки</UButton
 			>

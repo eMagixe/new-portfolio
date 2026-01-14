@@ -20,5 +20,4 @@ const [main] = useAppConfig().sidebar.links as NavigationMenuItem[][]
 	<UMain>
 		<NuxtPage />
 	</UMain>
-	<Footer />
 </template>
