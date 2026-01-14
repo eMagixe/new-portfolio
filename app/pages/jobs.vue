@@ -60,16 +60,15 @@ const items: TimelineItem[] = [
 
 <template>
 	<UContainer>
-		<UPageHeader>Опыт работы</UPageHeader>
+		<UPageHeader title="Опыт работы"/>
 		<UTimeline :items="items" class="mt-5">
 			<template #title="{ item }">
 				<h2>{{ item.title }}</h2>
 			</template>
 			<template #description="{ item }">
-				<h3 class="my-5">Должность: {{ item.description }}</h3>
-				<p class="mb-2">Обязанности:</p>
+				<h3 class="p-3 my-2 bg-neutral-100 shadow border-t-gray-500 mb-5">{{ item.description }}</h3>
 				<ul>
-					<li v-for="skill in item.skills">
+					<li v-for="skill in item.skills" :key="skill" class="list-disc ml-5 mb-1">
 						{{ skill }}
 					</li>
 				</ul>

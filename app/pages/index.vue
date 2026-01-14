@@ -21,18 +21,18 @@ const links = ref([
 
 <template>
 	<UPage>
-		<UPageHeader class="flex flex-col justify-center items-center border-0">
+		<div class="flex flex-col justify-center items-center mt-10">
 			<UAvatar src="./images/photo.jpg" size="3xl" />
-		</UPageHeader>
+		</div>
 		<UPageBody>
 			<UPageSection
-				title="Евченко Максим Николаевич"
-				description="Я - Frontend-разработчик (Vue.js, Nuxt.js) с опытом создания современных веб-приложений. Имею навыки работы с TypeScript, Tailwind CSS и другими технологиями для разработки высококачественных пользовательских интерфейсов."
+				title="Евченко Максим"
+				description="Я - Frontend-разработчик с многолетним опытом создания современных веб-приложений. Имею навыки работы с Vue.js, Nuxt.js, TypeScript, Tailwind CSS и другими технологиями для разработки высококачественных пользовательских интерфейсов."
 				:links="links as ButtonProps[]"
 			/>
 			<div class="flex flex-col justify-center items-center">
 				<p>Основные инструменты разработки</p>
-				<UMarquee class="w-[50%] mx-auto my-10">
+				<UMarquee class="w-[50%] mx-auto mt-10">
 					<UIcon name="i-simple-icons-vuedotjs" class="size-10 shrink-0" />
 					<UIcon name="i-simple-icons-nuxt" class="size-10 shrink-0" />
 					<UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
