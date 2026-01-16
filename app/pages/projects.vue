@@ -38,25 +38,37 @@ const projects: {
 	{
 		name: 'Raimbek',
 		image: '',
-		quote: 'Казахский спиртоводочный и соковый завод',
-		stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
+		quote: 'Первый казахский молочный завод',
+		stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS'],
+		slug: 'raimbek',
+		format: 'jpg',
+		images: [1, 2]
 	},
 	{
 		name: 'Portal',
 		image: '',
 		quote: 'Интернет магазин книг по изотерике',
+		slug: 'portal',
+		format: 'png',
+		images: [1, 2],
 		stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
 	},
 	{
 		name: 'IdoArt',
 		image: '',
 		quote: 'Портал по продаже курсов и обучающих материалов',
+		slug: 'idoArt',
+		format: 'png',
+		images: [1, 2, 3],
 		stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
 	},
 	{
-		name: 'SDEK парсинг отчетов',
+		name: 'Русхимальянс',
 		image: '',
-		quote: 'Парсинг и обработка отчетов СДЭК',
+		quote: 'Газоперерабатывающий завод',
+		slug: 'rca',
+		format: 'png',
+		images: [1, 2],
 		stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
 	}
 ]
@@ -89,7 +101,7 @@ const images = computed(() => {
 				:key="index"
 				:description="project.quote"
 				:ui="{
-					description: 'line-clamp-3',
+					description: 'line-clamp-3'
 				}"
 				class="w-64 shrink-0 cursor-pointer"
 				@click="currentProjectSlug = project.slug"
@@ -108,9 +120,9 @@ const images = computed(() => {
 		</div>
 
 		<UCarousel v-slot="{ item }" class-names arrows :items="images" class="mx-auto w-full mb-5">
-			<img :alt="currentProjectSlug" :src="item" class="rounded-lg w-full object-cover" />
+			<img :alt="currentProjectSlug" :src="item" class="rounded-lg max-h-[620px] mx-auto object-cover" />
 		</UCarousel>
-		
+
 		<div class="actions flex flex-row justify-between items-center w-full mb-10">
 			<UButton icon="i-lucide-arrow-left" to="/skills" color="neutral" variant="outline">Навыки</UButton>
 			<p>Проекты</p>
