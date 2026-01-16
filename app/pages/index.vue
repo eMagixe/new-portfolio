@@ -11,7 +11,7 @@ const links = ref([
 	},
 	{
 		label: 'Краткая биография',
-		to: '/bio',
+		to: '/about',
 		color: 'neutral',
 		variant: 'subtle',
 		trailingIcon: 'i-lucide-arrow-right'
@@ -30,6 +30,9 @@ definePageMeta({
 		</div>
 		<UPageBody>
 			<UPageSection
+				:ui="{
+					container: 'm-auto !p-5 text-center w-full',
+				}"
 				class="actions"
 				title="Евченко Максим"
 				description="Frontend-разработчик с многолетним опытом создания современных веб-приложений. Имею навыки работы с Vue.js, Nuxt.js, TypeScript, Tailwind CSS и другими технологиями для разработки высококачественных пользовательских интерфейсов."

@@ -24,8 +24,13 @@ export default defineAppConfig({
 				},
 				{
 					label: 'Проекты',
-					to: '#',
+					to: '/projects',
 					icon: 'i-lucide-folder-open'
+				},
+				{
+					label: 'Биография',
+					to: '/about',
+					icon: 'i-lucide-user'
 				}
 			],
 			[
@@ -57,7 +62,7 @@ export default defineAppConfig({
 		},
 		pageSection: {
 			slots: {
-				container: 'flex flex-col lg:grid py-5 sm:p-5 lg:p-5 gap-5 sm:gap-5'
+				container: 'flex flex-col lg:grid py-5 sm:projects-5 lg:projects-5 gap-5 sm:gap-5'
 			}
 		}
 	}
