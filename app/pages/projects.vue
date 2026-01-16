@@ -23,7 +23,7 @@ const projects: {
 		quote: 'Центр лабораторных исследований',
 		format: 'jpg',
 		slug: 'dcli',
-		images: [1, 2, 3],
+		images: [1, 2, 3, 4],
 		stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
 	},
 	{
@@ -33,12 +33,6 @@ const projects: {
 		format: 'jpg',
 		slug: 'kit',
 		images: [1, 2, 3],
-		stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
-	},
-	{
-		name: 'ЛКKK',
-		image: '',
-		quote: 'Автоматизация процессов сбора анализов',
 		stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
 	},
 	{
@@ -82,7 +76,7 @@ const images = computed(() => {
 
 <template>
 	<UContainer>
-		<UPageHeader title="Проекты" />
+		<UPageHeader title="Список проектов" />
 
 		<UMarquee
 			pause-on-hover
