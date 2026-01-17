@@ -56,11 +56,21 @@ const items: TimelineItem[] = [
 		]
 	}
 ]
+
+useSeoMeta({
+	title: 'Опыт работы - Евченко Максим',
+	ogTitle: 'Опыт работы - Евченко Максим',
+	description:
+		'Список мест работы, на которых работал Евченко Максим, Frontend-разработчик с многолетним опытом создания современных веб-приложений.',
+	ogDescription:
+		'Список мест работы, накоторых работал Евченко Максим, Frontend-разработчик с многолетним опытом создания современных веб-приложений.',
+	twitterCard: 'summary_large_image'
+})
 </script>
 
 <template>
 	<UContainer>
-		<UPageHeader title="Опыт работы"/>
+		<UPageHeader title="Опыт работы" />
 		<UTimeline :items="items" class="mt-5">
 			<template #title="{ item }">
 				<h2>{{ item.title }}</h2>

@@ -7,11 +7,15 @@ const [main] = useAppConfig().sidebar.links as NavigationMenuItem[][]
 
 <template>
 	<UHeader toggle-side="left">
-		<template #title>Frontend Developer</template>
+		<template #title>
+			<ActionsLogo />
+		</template>
 
 		<UNavigationMenu :items="main" />
 
-		<template #right> </template>
+		<template #right>
+			<ActionsContacts/>
+		</template>
 
 		<template #body>
 			<UNavigationMenu :items="main" orientation="vertical" />

@@ -1,17 +1,20 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui'
-import Footer from '~/components/section/footer.vue'
 
 const [main] = useAppConfig().sidebar.links as NavigationMenuItem[][]
 </script>
 
 <template>
-	<UHeader toggle-side="left">
-		<template #title>Frontend Developer</template>
+	<UHeader toggle-side="right">
+		<template #title>
+			<ActionsLogo />
+		</template>
 
 		<UNavigationMenu :items="main" />
 
-		<template #right> </template>
+		<template #right>
+			<ActionsContacts />
+		</template>
 
 		<template #body>
 			<UNavigationMenu :items="main" orientation="vertical" />

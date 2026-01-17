@@ -13,5 +13,5 @@ export default defineNuxtConfig({
 			{ code: 'ru', name: 'Русский', file: 'ru.json' },
 			{ code: 'en', name: 'English', file: 'en.json' }
 		]
-	}
+	},
 })

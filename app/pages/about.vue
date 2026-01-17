@@ -1,4 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useSeoMeta({
+	title: 'Краткая биография - Евченко Максим',
+	ogTitle: 'Краткая биография - Евченко Максим',
+	description:
+		'Евченко Максим - Frontend-разработчик с многолетним опытом создания современных веб-приложений. Имеет навыки работы с Vue.js, Nuxt.js, TypeScript, Tailwind CSS и другими технологиями для разработки высококачественных пользовательских интерфейсов.',
+	ogDescription:
+		'Евченко Максим - Frontend-разработчик с многолетним опытом создания современных веб-приложений. Имеет навыки работы с Vue.js, Nuxt.js, TypeScript, Tailwind CSS и другими технологиями для разработки высококачественных пользовательских интерфейсов.',
+	twitterCard: 'summary_large_image'
+})
+</script>
 
 <template>
 	<UContainer>

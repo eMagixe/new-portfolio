@@ -21,6 +21,16 @@ const links = ref([
 definePageMeta({
 	layout: 'home'
 })
+
+useSeoMeta({
+	title: 'Frontend Developer - Евченко Максим',
+	ogTitle: 'Frontend Developer - Евченко Максим',
+	description:
+		'Евченко Максим - Frontend-разработчик с многолетним опытом создания современных веб-приложений. Имеет навыки работы с Vue.js, Nuxt.js, TypeScript, Tailwind CSS и другими технологиями для разработки высококачественных пользовательских интерфейсов.',
+	ogDescription:
+		'Евченко Максим - Frontend-разработчик с многолетним опытом создания современных веб-приложений. Имеет навыки работы с Vue.js, Nuxt.js, TypeScript, Tailwind CSS и другими технологиями для разработки высококачественных пользовательских интерфейсов.',
+	twitterCard: 'summary_large_image'
+})
 </script>
 
 <template>
@@ -31,7 +41,7 @@ definePageMeta({
 		<UPageBody>
 			<UPageSection
 				:ui="{
-					container: 'm-auto !p-5 text-center w-full',
+					container: 'm-auto !p-5 text-center w-full'
 				}"
 				class="actions"
 				title="Евченко Максим"
