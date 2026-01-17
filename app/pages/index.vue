@@ -1,26 +1,24 @@
 <script setup lang="ts">
 import type { ButtonProps } from '@nuxt/ui/components/Button.vue'
 
+const { t } = useI18n()
+
 const links = ref([
 	{
-		label: 'Опыт работы',
-		to: '/jobs',
+		label: t('buttons.projects.text'),
+		to: t('buttons.projects.to'),
 		variant: 'subtle',
 		icon: 'i-lucide-rocket',
 		color: 'neutral'
 	},
 	{
-		label: 'Краткая биография',
-		to: '/about',
+		label: t('buttons.about.text'),
+		to: t('buttons.about.to'),
 		color: 'neutral',
 		variant: 'subtle',
 		trailingIcon: 'i-lucide-arrow-right'
 	}
 ])
-
-definePageMeta({
-	layout: 'home'
-})
 
 useSeoMeta({
 	title: 'Frontend Developer - Евченко Максим',
@@ -36,7 +34,7 @@ useSeoMeta({
 <template>
 	<UPage>
 		<div class="flex flex-col justify-center items-center mt-10">
-			<UAvatar src="./images/photo.jpg" size="3xl" />
+			<UAvatar src="/images/photo.jpg" size="3xl" />
 		</div>
 		<UPageBody>
 			<UPageSection
@@ -44,12 +42,12 @@ useSeoMeta({
 					container: 'm-auto !p-5 text-center w-full'
 				}"
 				class="actions"
-				title="Евченко Максим"
-				description="Frontend-разработчик с многолетним опытом создания современных веб-приложений. Имею навыки работы с Vue.js, Nuxt.js, TypeScript, Tailwind CSS и другими технологиями для разработки высококачественных пользовательских интерфейсов."
+				:title="$t('name')"
+				:description="$t('description')"
 				:links="links as ButtonProps[]"
 			/>
 			<div class="flex flex-col justify-center items-center">
-				<p>Основные инструменты разработки</p>
+				<p>{{ $t('skills') }}</p>
 				<UMarquee class="w-[50%] mx-auto mt-10">
 					<UIcon name="i-simple-icons-vuedotjs" class="size-10 shrink-0" />
 					<UIcon name="i-simple-icons-nuxt" class="size-10 shrink-0" />

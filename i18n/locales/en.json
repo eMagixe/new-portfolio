@@ -1,3 +1,15 @@
 {
-	"welcome": "Welcome"
+	"name": "Max Evchenko",
+	"description": "Frontend developer with many years of experience building modern web applications. Skilled in Vue.js, Nuxt.js, TypeScript, Tailwind CSS, and other technologies for developing high-quality user interfaces.",
+	"buttons": {
+		"projects": {
+			"text": "My projects",
+			"to": "/en/projects"
+		},
+		"about": {
+			"text": "About me",
+			"to": "/en/about"
+		}
+	},
+	"skills": "Main development tools"
 }

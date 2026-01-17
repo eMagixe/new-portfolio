@@ -5,20 +5,20 @@ setLocale('ru')
 </script>
 
 <template>
-	<UFieldGroup>
+	<UFieldGroup class="ml-5">
 		<UButton
-			class="lang-button"
+			class="cursor-pointer bg-neutral-100 text-[10px]"
 			:class="{
-				'bg-[#c1c4eb] text-[#7b83f1]': locale === 'ru'
+				'bg-neutral-200 text-[10px]': locale === 'ru'
 			}"
 			@click="setLocale('ru')"
 			variant="outline"
 			label="RUS"
 		/>
 		<UButton
-			class="lang-button"
+			class="cursor-pointer lang-button bg-neutral-100 text-[10px]"
 			:class="{
-				'bg-[#c1c4eb] text-[#7b83f1]': locale === 'en'
+				'bg-neutral-200 text-[10px]': locale === 'en'
 			}"
 			@click="setLocale('en')"
 			variant="outline"
@@ -26,15 +26,3 @@ setLocale('ru')
 		/>
 	</UFieldGroup>
 </template>
-
-<style scoped>
-.lang-button {
-	cursor: pointer;
-}
-
-.lang-button:hover {
-	cursor: pointer;
-	color: #c1c4eb;
-	background: #7b83f1;
-}
-</style>
