@@ -1,10 +1,11 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
 	<ActionsTop />
 	<UMain>
-		<NuxtPage />
+		<UApp :tooltip="{ delayDuration: 300 }">
+			<NuxtPage />
+		</UApp>
 	</UMain>
 	<SectionFooter />
 </template>

@@ -24,6 +24,10 @@ h3 {
     font-weight: 450;
 }
 
+:root {
+    --ui-primary: #585b84;
+}
+
 .actions {
     a {
         @apply bg-neutral-100
