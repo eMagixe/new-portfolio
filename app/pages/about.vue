@@ -1,62 +1,61 @@
 <script setup lang="ts">
+const { t } = useI18n()
+
 useSeoMeta({
-	title: 'Краткая биография - Евченко Максим',
-	ogTitle: 'Краткая биография - Евченко Максим',
-	description:
-		'Евченко Максим - Frontend-разработчик с многолетним опытом создания современных веб-приложений. Имеет навыки работы с Vue.js, Nuxt.js, TypeScript, Tailwind CSS и другими технологиями для разработки высококачественных пользовательских интерфейсов.',
-	ogDescription:
-		'Евченко Максим - Frontend-разработчик с многолетним опытом создания современных веб-приложений. Имеет навыки работы с Vue.js, Nuxt.js, TypeScript, Tailwind CSS и другими технологиями для разработки высококачественных пользовательских интерфейсов.',
+	title: t('about.seo.title'),
+	ogTitle: t('about.seo.title'),
+	description: t('about.seo.description'),
+	ogDescription: t('about.seo.description'),
 	twitterCard: 'summary_large_image'
 })
 </script>
 
 <template>
 	<UContainer>
-		<UPageHeader title="Обо мне" />
-
-		<h2 class="my-5">Начало</h2>
-
+		<UPageHeader :title="$t('about.title')" />
+		<h2 class="my-5">{{ $t('about.content.start_block.title') }}</h2>
 		<p>
-			Мой карьерный рост начался с работы на телевидении в рекламном отделе. Я работал дизайнером рекламных
-			продуктов. В один прекрасный момент нашему рекламному агентству понадобилось сделать сайт с этого и началось
-			мое знакомство с программированием и веб-разработкой. Мы создали сайт на Wordpress и после этого решили
-			добавить услугу по созданию сайтов для наших клиентов. Но это было только начало. Я начал изучать
-			веб-разработку и языки программирования познакомился с PHP, CSS, и Javascript. Чем больше я изучал тем
-			больше понимал что писать сайты на готовых движках или нативных языках это не практично и не гибко. Нужно
-			изучать фреймворки первый из таких был Laravel.
+			{{ $t('about.content.start_block.text') }}
+		</p>
+		<h2 class="my-5">{{ $t('about.content.vue_block.title') }}</h2>
+		<p>
+			{{ $t('about.content.vue_block.text') }}
+			<NuxtLink class="underline" :to="$t('about.content.vue_block.link.to')">
+				{{ $t('about.content.vue_block.link.text') }}
+			</NuxtLink>
+		</p>
+		<h2 class="my-5">{{ $t('about.content.nuxt_block.title') }}</h2>
+		<p>
+			{{ $t('about.content.nuxt_block.text') }}
 		</p>
 
-		<h2 class="my-5">Vue.js</h2>
-
+		<h2 class="my-5">{{ $t('about.content.future_block.title') }}</h2>
 		<p>
-			Затем когда в Laravel добавили Vue.js я был в восторге от его возможностей и решил поменять свое направление
-			на Front-End. Изучая Vue.js я познакомился и с Node.js технологией и углубился в изучение JavaScript и всех
-			его нововведений. Со всеми технологиями веб-разработки описанными в разделе Знания технологий я познакомился
-			в процессе решения задач на моем пути и накоплении опыта. Он весь расписан по годам в разделе
-			<NuxtLink class="underline" to="/jobs">Опыт работы</NuxtLink>.
-		</p>
-
-		<h2 class="my-5">Nuxt.js</h2>
-
-		<p>
-			Со временем я познакомился с Nuxt.js фреймворком и понял что это будущее веб-разработки. Я начал изучать его
-			и использовать в своих проектах. Nuxt.js позволил мне создавать более сложные и масштабируемые приложения с
-			меньшими затратами времени и усилий. Я также начал использовать TypeScript для улучшения качества кода и
-			уменьшения количества ошибок.
-		</p>
-
-		<h2 class="my-5">Что дальше?</h2>
-		<p>
-			Сейчас я продолжаю изучать новые технологии и инструменты в веб-разработке. Как и Интернет который не стоит
-			на месте так и я спешу за ним и стараюсь изучать новое и совершенствоваться. Все мои навыки и знания я
-			применяю в своих <NuxtLink class="underline" to="/projects">проектах</NuxtLink> c ними вы можете посмотреть
-			ознакомиться в разделе <NuxtLink class="underline" to="/skills">Навыки</NuxtLink>.
+			{{ $t('about.content.future_block.text') }}
+			<NuxtLink class="underline" :to="$t('about.content.future_block.link.to')">
+				{{ $t('about.content.future_block.link.text') }}
+			</NuxtLink>
 		</p>
 
 		<div class="actions flex flex-row justify-between items-center w-full my-10">
-			<UButton icon="i-lucide-arrow-left" to="/projects" color="neutral" variant="outline">Проекты</UButton>
-			<p>Обо мне</p>
-			<UButton trailing-icon="i-lucide-arrow-right" to="/" color="neutral" variant="outline">Главная</UButton>
+			<UButton
+				icon="i-lucide-arrow-left"
+				:to="$t('about.buttons.prev.to')"
+				color="neutral"
+				variant="outline"
+			>
+				{{ $t('about.buttons.prev.text') }}
+			</UButton>
+			<p>{{ $t('about.title') }}</p>
+			<UButton
+				trailing-icon="i-lucide-arrow-right"
+				:to="$t('about.buttons.next.to')"
+				color="neutral"
+				variant="outline"
+			>
+				{{ $t('about.buttons.next.text') }}
+			</UButton
+			>
 		</div>
 	</UContainer>
 </template>

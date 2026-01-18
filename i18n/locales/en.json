@@ -63,5 +63,65 @@
 				"to": "/en/projects"
 			}
 		}
+	},
+	"projects": {
+		"title": "Projects list",
+		"seo": {
+			"title": "Projects - Max Evchenko",
+			"description": "A list of projects participated in by Max Evchenko, a Frontend Developer with many years of experience building modern web applications."
+		},
+		"buttons": {
+			"prev": {
+				"text": "Skills",
+				"to": "/en/skills"
+			},
+			"next": {
+				"text": "About me",
+				"to": "/en/about"
+			}
+		}
+	},
+	"about": {
+		"title": "About me",
+		"seo": {
+			"title": "About Me - Max Evchenko",
+			"description": "Max Evchenko - Frontend developer with many years of experience building modern web applications. Skilled in Vue.js, Nuxt.js, TypeScript, Tailwind CSS and other technologies for developing high-quality user interfaces."
+		},
+		"content": {
+			"start_block": {
+				"title": "Getting started",
+				"text": "My career began in television in the advertising department, where I worked as a designer of advertising products. At one point our agency needed a website, which started my journey into programming and web development. We built a site on WordPress and later added a website creation service for clients. That was just the beginning. I began studying web development and programming languages such as PHP, CSS and JavaScript. The more I learned, the more I realized that building sites on ready-made engines or with plain languages is not practical or flexible. It was necessary to learn frameworks; the first of them I studied was Laravel."
+			},
+			"vue_block": {
+				"title": "Vue.js and Front-End",
+				"text": "When Vue.js was added to Laravel, I was excited by its capabilities and decided to switch to Front-End development. While learning Vue.js I also discovered Node.js and deepened my understanding of JavaScript and its new features. I became familiar with the web technologies listed in the Skills section by solving real tasks and gaining experience. They are described chronologically in the",
+				"link": {
+					"text": "Work Experience",
+					"to": "/en/jobs"
+				}
+			},
+			"nuxt_block": {
+				"title": "Nuxt.js",
+				"text": "Over time I learned the Nuxt.js framework and realized it is the future of web development. I began using it in my projects. Nuxt.js allowed me to create more complex and scalable applications with less time and effort. I also started using TypeScript to improve code quality and reduce errors."
+			},
+			"future_block": {
+				"title": "What's next?",
+				"text": "I continue to study new technologies and tools in web development. Just like the Internet, which never stands still, I strive to keep up and improve. I apply all my skills and knowledge in my projects, which you can view in the",
+				"link": {
+					"text": "Projects",
+					"to": "/en/projects"
+				}
+			}
+		},
+		"buttons": {
+			"prev": {
+				"text": "Projects",
+				"to": "/en/projects"
+			},
+			"next": {
+				"text": "Home",
+				"to": "/en/"
+			}
+		}
 	}
 }

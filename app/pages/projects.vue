@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const projects: {
+const { locale, t } = useI18n()
+
+type Project = {
 	name: string
 	image: string
 	quote: string
@@ -7,77 +9,17 @@ const projects: {
 	slug?: string
 	format?: string
 	images?: number[]
-}[] = [
-	{
-		name: 'Sharmed Books',
-		image: '',
-		quote: 'Интерактивные книжки для детей',
-		stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS'],
-		slug: 'charmed-books',
-		format: 'png',
-		images: [1, 2, 3]
-	},
-	{
-		name: 'DCLI',
-		image: '',
-		quote: 'Центр лабораторных исследований',
-		format: 'jpg',
-		slug: 'dcli',
-		images: [1, 2, 3, 4],
-		stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
-	},
-	{
-		name: 'Kit Tracker',
-		image: '',
-		quote: 'Отслеживание поставок анализа крови и др',
-		format: 'jpg',
-		slug: 'kit',
-		images: [1, 2, 3],
-		stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
-	},
-	{
-		name: 'Raimbek',
-		image: '',
-		quote: 'Первый казахский молочный завод',
-		stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS'],
-		slug: 'raimbek',
-		format: 'jpg',
-		images: [1, 2]
-	},
-	{
-		name: 'Portal',
-		image: '',
-		quote: 'Интернет магазин книг по изотерике',
-		slug: 'portal',
-		format: 'png',
-		images: [1, 2],
-		stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
-	},
-	{
-		name: 'IdoArt',
-		image: '',
-		quote: 'Портал по продаже курсов и обучающих материалов',
-		slug: 'idoArt',
-		format: 'png',
-		images: [1, 2, 3],
-		stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
-	},
-	{
-		name: 'Русхимальянс',
-		image: '',
-		quote: 'Газоперерабатывающий завод',
-		slug: 'rca',
-		format: 'png',
-		images: [1, 2],
-		stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
-	}
-]
+}
+
+const projects = computed(() => {
+	return (locale.value === 'ru' ? useAppConfig().ru.projects : useAppConfig().en.projects) as Project[]
+})
 
 const currentProjectSlug = ref<string | undefined>('charmed-books')
-const selectedProject = ref(projects[0])
+const selectedProject = ref(projects.value[0])
 
 const images = computed(() => {
-	selectedProject.value = projects.find((i) => i.slug === currentProjectSlug.value)
+	selectedProject.value = projects.value.find((i) => i.slug === currentProjectSlug.value)
 	return (
 		selectedProject.value?.images?.map(
 			(i) => `/images/projects/${currentProjectSlug.value}/${i}.${selectedProject.value?.format}`
@@ -86,19 +28,18 @@ const images = computed(() => {
 })
 
 useSeoMeta({
-	title: 'Проекты - Евченко Максим',
-	ogTitle: 'Проекты - Евченко Максим',
-	description:
-		'Список проектов, в которых участвовал Евченко Максим, Frontend-разработчик с многолетним опытом создания современных веб-приложений.',
-	ogDescription:
-		'Список проектов, в которых участвовал Евченко Максим, Frontend-разработчик с многолетним опытом создания современных веб-приложений.',
+	title: t('projects.seo.title'),
+	ogTitle: t('projects.seo.title'),
+	description: t('projects.seo.description'),
+	ogDescription: t('projects.seo.description'),
 	twitterCard: 'summary_large_image'
 })
+
 </script>
 
 <template>
 	<UContainer>
-		<UPageHeader title="Список проектов" />
+		<UPageHeader :title="$t('projects.title')" />
 
 		<UMarquee
 			pause-on-hover
@@ -134,11 +75,18 @@ useSeoMeta({
 		</UCarousel>
 
 		<div class="actions flex flex-row justify-between items-center w-full mb-10">
-			<UButton icon="i-lucide-arrow-left" to="/skills" color="neutral" variant="outline">Навыки</UButton>
-			<p>Проекты</p>
-			<UButton trailing-icon="i-lucide-arrow-right" to="/about" color="neutral" variant="outline"
-				>Биография</UButton
+			<UButton icon="i-lucide-arrow-left" :to="$t('projects.buttons.prev.to')" color="neutral" variant="outline">
+				{{ $t('projects.buttons.prev.text') }}
+			</UButton>
+			<p>{{ $t('projects.title') }}</p>
+			<UButton
+				trailing-icon="i-lucide-arrow-right"
+				:to="$t('projects.buttons.next.to')"
+				color="neutral"
+				variant="outline"
 			>
+				{{ $t('projects.buttons.next.text') }}
+			</UButton>
 		</div>
 	</UContainer>
 </template>

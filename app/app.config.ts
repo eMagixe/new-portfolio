@@ -206,7 +206,72 @@ export default defineAppConfig({
 					target: '_blank'
 				}
 			]
-		}
+		},
+		projects: [
+			{
+				name: 'Sharmed Books',
+				image: '',
+				quote: 'Интерактивные книжки для детей',
+				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS'],
+				slug: 'charmed-books',
+				format: 'png',
+				images: [1, 2, 3]
+			},
+			{
+				name: 'DCLI',
+				image: '',
+				quote: 'Центр лабораторных исследований',
+				format: 'jpg',
+				slug: 'dcli',
+				images: [1, 2, 3, 4],
+				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
+			},
+			{
+				name: 'Kit Tracker',
+				image: '',
+				quote: 'Отслеживание поставок анализа крови и др',
+				format: 'jpg',
+				slug: 'kit',
+				images: [1, 2, 3],
+				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
+			},
+			{
+				name: 'Raimbek',
+				image: '',
+				quote: 'Первый казахский молочный завод',
+				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS'],
+				slug: 'raimbek',
+				format: 'jpg',
+				images: [1, 2]
+			},
+			{
+				name: 'Portal',
+				image: '',
+				quote: 'Интернет магазин книг по изотерике',
+				slug: 'portal',
+				format: 'png',
+				images: [1, 2],
+				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
+			},
+			{
+				name: 'IdoArt',
+				image: '',
+				quote: 'Портал по продаже курсов и обучающих материалов',
+				slug: 'idoArt',
+				format: 'png',
+				images: [1, 2, 3],
+				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
+			},
+			{
+				name: 'Русхимальянс',
+				image: '',
+				quote: 'Газоперерабатывающий завод в России',
+				slug: 'rca',
+				format: 'png',
+				images: [1, 2],
+				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
+			}
+		]
 	},
 	en: {
 		sidebar: {
@@ -339,7 +404,8 @@ export default defineAppConfig({
 				},
 				{
 					name: 'GitHub',
-					description: 'Web platform and hosting for software projects based on the Git version control system.',
+					description:
+						'Web platform and hosting for software projects based on the Git version control system.',
 					icon: 'i-simple-icons-github',
 					to: 'https://www.github.com',
 					target: '_blank'
@@ -388,7 +454,7 @@ export default defineAppConfig({
 				},
 				{
 					name: 'Node.js',
-					description: 'Cross-platform JavaScript runtime built on Chrome\'s V8 engine.',
+					description: "Cross-platform JavaScript runtime built on Chrome's V8 engine.",
 					icon: 'i-simple-icons-nodedotjs',
 					to: 'https://nodejs.org',
 					target: '_blank'
@@ -410,7 +476,72 @@ export default defineAppConfig({
 					target: '_blank'
 				}
 			]
-		}
+		},
+		projects: [
+			{
+				name: 'Sharmed Books',
+				image: '',
+				quote: 'Interactive books for children',
+				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS'],
+				slug: 'charmed-books',
+				format: 'png',
+				images: [1, 2, 3]
+			},
+			{
+				name: 'DCLI',
+				image: '',
+				quote: 'Laboratory Research Center',
+				format: 'jpg',
+				slug: 'dcli',
+				images: [1, 2, 3, 4],
+				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
+			},
+			{
+				name: 'Kit Tracker',
+				image: '',
+				quote: 'Tracking deliveries of blood tests and more',
+				format: 'jpg',
+				slug: 'kit',
+				images: [1, 2, 3],
+				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
+			},
+			{
+				name: 'Raimbek',
+				image: '',
+				quote: 'The first Kazakh dairy plant',
+				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS'],
+				slug: 'raimbek',
+				format: 'jpg',
+				images: [1, 2]
+			},
+			{
+				name: 'Portal',
+				image: '',
+				quote: 'Online store of esoteric books',
+				slug: 'portal',
+				format: 'png',
+				images: [1, 2],
+				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
+			},
+			{
+				name: 'IdoArt',
+				image: '',
+				quote: 'Portal for selling courses and educational materials',
+				slug: 'idoArt',
+				format: 'png',
+				images: [1, 2, 3],
+				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
+			},
+			{
+				name: 'Ruskhimalyans',
+				image: '',
+				quote: 'Russian gas processing plant',
+				slug: 'rca',
+				format: 'png',
+				images: [1, 2],
+				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
+			}
+		]
 	},
 	footer: {
 		credits: `Magixe © ${new Date().getFullYear()}`
