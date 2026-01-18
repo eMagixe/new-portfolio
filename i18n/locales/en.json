@@ -38,5 +38,30 @@
 				"to": "/en/skills"
 			}
 		}
+	},
+	"skills": {
+		"title": "Skills and Technologies",
+		"subtitle": {
+			"first": "Primary tools",
+			"second": "Additional tools"
+		},
+		"block_info": {
+			"title": "Additional information",
+			"description": "I also have knowledge of languages such as C, C++, and C#, as well as various related technologies and libraries. I do not list them here because they are not part of my primary specialization, but I am ready to use them if necessary."
+		},
+		"seo": {
+			"title": "Skills and Technologies - Max Evchenko",
+			"description": "A list of skills and tools known by Max Evchenko, a Frontend Developer with many years of experience building modern web applications."
+		},
+		"buttons": {
+			"prev": {
+				"text": "Work Experience",
+				"to": "/en/jobs"
+			},
+			"next": {
+				"text": "My Projects",
+				"to": "/en/projects"
+			}
+		}
 	}
 }

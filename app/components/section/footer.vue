@@ -2,10 +2,17 @@
 import type { NavigationMenuItem } from '@nuxt/ui'
 
 const items: NavigationMenuItem[] = []
+
+const route = useRoute()
+
+const visible = computed(() => {
+	return !(route.name === 'index___en' || route.name === 'index___ru')
+})
+
 </script>
 
 <template>
-	<UFooter class="border border-t-gray-200 border-b-0 border-x-0">
+	<UFooter v-if="visible" class="border border-t-gray-200 border-b-0 border-x-0">
 		<template #left>
 			<p class="text-muted text-sm">Max Evchenko © {{ new Date().getFullYear() }}</p>
 		</template>

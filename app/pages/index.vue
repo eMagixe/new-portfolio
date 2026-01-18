@@ -8,7 +8,7 @@ const links = ref([
 		label: t('index.buttons.projects.text'),
 		to: t('index.buttons.projects.to'),
 		variant: 'subtle',
-		icon: 'i-lucide-rocket',
+		icon: 'i-lucide-folder-open',
 		color: 'neutral'
 	},
 	{
@@ -28,7 +28,6 @@ useSeoMeta({
 	ogImage: 'summary_large_image',
 	twitterCard: 'summary_large_image'
 })
-
 </script>
 
 <template>
