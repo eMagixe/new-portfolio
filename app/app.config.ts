@@ -14,7 +14,7 @@ export default defineAppConfig({
 						icon: 'i-lucide-home'
 					},
 					{
-						label: 'Карьера',
+						label: 'Опыт работы',
 						to: '/jobs',
 						icon: 'i-lucide-rocket'
 					},
@@ -283,7 +283,7 @@ export default defineAppConfig({
 						icon: 'i-lucide-home'
 					},
 					{
-						label: 'Jobs',
+						label: 'Work Experience',
 						to: '/en/jobs',
 						icon: 'i-lucide-rocket'
 					},
@@ -349,7 +349,7 @@ export default defineAppConfig({
 			},
 			{
 				date: 'May, 2019',
-				title: 'MAU "ART"',
+				title: 'MAI "ART"',
 				description: 'Web Developer',
 				icon: 'i-lucide-rocket',
 				skills: [
