@@ -5780,7 +5780,6 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
   setup(__props) {
     const { setLocale, locale } = useI18n();
-    setLocale("ru");
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UFieldGroup = _sfc_main$b;
       const _component_UButton = _sfc_main$l;
@@ -5852,7 +5851,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
       const _component_UNavigationMenu = _sfc_main$d;
       const _component_ActionsContacts = __nuxt_component_3;
       const _component_SelectLocale = __nuxt_component_4$1;
-      _push(ssrRenderComponent(_component_UHeader, mergeProps({ "toggle-side": "right" }, _attrs), {
+      _push(ssrRenderComponent(_component_UHeader, mergeProps({ "toggle-side": "left" }, _attrs), {
         title: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(ssrRenderComponent(_component_ActionsLogo, null, null, _parent2, _scopeId));
@@ -7689,4 +7688,4 @@ _sfc_main.setup = (props, ctx) => {
 const _default = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { _default as default };
-//# sourceMappingURL=default-DYgktyOQ.mjs.map
+//# sourceMappingURL=default-COWv4-BU.mjs.map
