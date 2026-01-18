@@ -1,7 +1,5 @@
 <script setup lang="ts">
 const { setLocale, locale } = useI18n()
-
-setLocale('ru')
 </script>
 
 <template>

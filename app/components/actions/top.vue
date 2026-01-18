@@ -16,7 +16,7 @@ const main = computed(() => {
 </script>
 
 <template>
-	<UHeader toggle-side="right">
+	<UHeader toggle-side="left">
 		<template #title>
 			<ActionsLogo />
 		</template>
