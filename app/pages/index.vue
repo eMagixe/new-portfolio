@@ -21,15 +21,14 @@ const links = ref([
 ])
 
 useSeoMeta({
-	title: 'Frontend Developer - Евченко Максим',
-	ogTitle: 'Frontend Developer - Евченко Максим',
+	title: t('index.seo.title'),
+	description: t('index.seo.description'),
+	ogTitle: t('index.seo.title'),
+	ogDescription: t('index.seo.description'),
 	ogImage: 'summary_large_image',
-	description:
-		'Евченко Максим - Frontend-разработчик с многолетним опытом создания современных веб-приложений. Имеет навыки работы с Vue.js, Nuxt.js, TypeScript, Tailwind CSS и другими технологиями для разработки высококачественных пользовательских интерфейсов.',
-	ogDescription:
-		'Евченко Максим - Frontend-разработчик с многолетним опытом создания современных веб-приложений. Имеет навыки работы с Vue.js, Nuxt.js, TypeScript, Tailwind CSS и другими технологиями для разработки высококачественных пользовательских интерфейсов.',
 	twitterCard: 'summary_large_image'
 })
+
 </script>
 
 <template>

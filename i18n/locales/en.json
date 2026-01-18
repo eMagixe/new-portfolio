@@ -12,6 +12,31 @@
 				"to": "/en/about"
 			}
 		},
-		"skills": "Main development tools"
+		"skills": "Main development tools",
+		"seo": {
+			"title": "Frontend Developer - Max Evchenko",
+			"description": "Max Evchenko — Frontend developer with many years of experience creating modern web applications. Skilled in Vue.js, Nuxt.js, TypeScript, Tailwind CSS and other technologies for building high-quality user interfaces."
+		}
+	},
+	"jobs": {
+		"title": "Work Experience",
+		"block_info": {
+			"title": "Additional Information",
+			"description": "Throughout my career I worked as a programmer in several other places and learned languages such as PHP, C, C++, and C#, but I do not list them here because they are not part of my main specialization."
+		},
+		"seo": {
+			"title": "Work Experience - Max Evchenko",
+			"description": "A list of places where Max Evchenko worked, a Frontend Developer with many years of experience building modern web applications."
+		},
+		"buttons": {
+			"prev": {
+				"text": "Home",
+				"to": "/en/"
+			},
+			"next": {
+				"text": "Skills",
+				"to": "/en/skills"
+			}
+		}
 	}
 }
