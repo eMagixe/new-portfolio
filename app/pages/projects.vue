@@ -5,6 +5,7 @@ type Project = {
 	name: string
 	image: string
 	quote: string
+	description: string
 	stack: string[]
 	slug?: string
 	format?: string
@@ -34,7 +35,6 @@ useSeoMeta({
 	ogDescription: t('projects.seo.description'),
 	twitterCard: 'summary_large_image'
 })
-
 </script>
 
 <template>
@@ -48,18 +48,23 @@ useSeoMeta({
 			:ui="{ root: '[--gap:--spacing(4)] my-5', content: 'w-auto py-1' }"
 		>
 			<UPageCard
-				v-for="(project, index) in projects"
-				:key="index"
-				:description="project.quote"
+				v-for="(project, index) in projects" :key="index"
 				:ui="{
 					description: 'line-clamp-3'
 				}"
-				class="w-64 shrink-0 cursor-pointer"
+				class="w-64 h-42 shrink-0 cursor-pointer"
 				@click="currentProjectSlug = project.slug"
 			>
 				<template #header>
-					<h3 class="text-[14px] font-semibold">{{ project.name }}</h3>
+					<h3 class="font-semibold">{{ project.name }}</h3>
 				</template>
+
+				<template #body>
+					<UTooltip :text="project.description">
+						<p class="text-[14px]">{{ project.quote }}</p>
+					</UTooltip>
+				</template>
+
 				<template #footer>
 					<p class="text-[12px]">{{ project.stack.join(', ') }}</p>
 				</template>
@@ -67,7 +72,7 @@ useSeoMeta({
 		</UMarquee>
 
 		<div class="w-full bg-neutral-100 px-4 py-2 my-5">
-			{{ selectedProject?.name }} - {{ selectedProject?.quote }}
+			{{ selectedProject?.name }} - {{ selectedProject?.description }}
 		</div>
 
 		<UCarousel v-slot="{ item }" class-names arrows :items="images" class="mx-auto w-full mb-5">
