@@ -253,7 +253,7 @@ export default defineAppConfig({
 			{
 				name: 'Portal',
 				image: '',
-				quote: 'Интернет магазин книг по изотерике',
+				quote: 'Интернет магазин книг по эзотерике',
 				description: 'Портал по созданию и продаже книг и статей по эзотерике и духовным практикам',
 				slug: 'portal',
 				format: 'png',
