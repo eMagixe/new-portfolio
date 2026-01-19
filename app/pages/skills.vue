@@ -6,7 +6,7 @@ const first_skills = computed(() => {
 })
 
 const secondary_skills = computed(() => {
-	return locale.value === 'ru' ? useAppConfig().ru.skills.first : useAppConfig().en.skills.first
+	return locale.value === 'ru' ? useAppConfig().ru.skills.second : useAppConfig().en.skills.second
 })
 
 useSeoMeta({

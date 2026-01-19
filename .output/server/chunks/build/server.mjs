@@ -425,12 +425,12 @@ const _routes = [
   {
     name: "skills___ru",
     path: "/skills",
-    component: () => import('./skills-DPt8JvVF.mjs')
+    component: () => import('./skills-Jt2yhiSD.mjs')
   },
   {
     name: "skills___en",
     path: "/en/skills",
-    component: () => import('./skills-DPt8JvVF.mjs')
+    component: () => import('./skills-Jt2yhiSD.mjs')
   },
   {
     name: "projects___ru",
@@ -2305,7 +2305,7 @@ function createNuxtI18nContext(nuxt, vueI18n, defaultLocale) {
       return;
     }
     const headers = getLocaleConfig(locale)?.cacheable ? {} : { "Cache-Control": "no-cache" };
-    const messages = await $fetch(`${"/_i18n/xlcN3bvE"}/${locale}/messages.json`, { headers });
+    const messages = await $fetch(`${"/_i18n/Dc5h6_-R"}/${locale}/messages.json`, { headers });
     for (const k of Object.keys(messages)) {
       i18n.mergeLocaleMessage(k, messages[k]);
     }
@@ -6563,7 +6563,7 @@ const i18n_EI7LsD1KYQADczz5hrChviGQCdVM8yUkvFEZLJpmnvM = /* @__PURE__ */ defineN
     {
       localeConfigs.value = useRequestEvent().context.nuxtI18n?.localeConfigs || {};
     }
-    prerenderRoutes(localeCodes.map((locale) => `${"/_i18n/xlcN3bvE"}/${locale}/messages.json`));
+    prerenderRoutes(localeCodes.map((locale) => `${"/_i18n/Dc5h6_-R"}/${locale}/messages.json`));
     const i18n = createI18n(optionsI18n);
     const detectors = useDetectors(useRequestEvent(nuxt), useI18nDetection(nuxt), nuxt);
     const ctx = createNuxtI18nContext(nuxt, i18n, optionsI18n.defaultLocale);

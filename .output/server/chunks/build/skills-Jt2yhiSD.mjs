@@ -89,7 +89,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       return locale.value === "ru" ? useAppConfig().ru.skills.first : useAppConfig().en.skills.first;
     });
     const secondary_skills = computed(() => {
-      return locale.value === "ru" ? useAppConfig().ru.skills.first : useAppConfig().en.skills.first;
+      return locale.value === "ru" ? useAppConfig().ru.skills.second : useAppConfig().en.skills.second;
     });
     useSeoMeta({
       title: t("skills.seo.title"),
@@ -410,4 +410,4 @@ _sfc_main.setup = (props, ctx) => {
 };
 
 export { _sfc_main as default };
-//# sourceMappingURL=skills-DPt8JvVF.mjs.map
+//# sourceMappingURL=skills-Jt2yhiSD.mjs.map
