@@ -77,7 +77,12 @@ useSeoMeta({
 		/>
 
 		<div class="actions flex flex-row justify-between items-center w-full mb-10">
-			<UButton icon="i-lucide-arrow-left" :to="$t('skills.buttons.prev.to')" color="neutral" variant="outline">
+			<UButton
+				icon="i-lucide-arrow-left"
+				:to="$t('skills.buttons.prev.to')"
+				color="neutral"
+				variant="outline"
+			>
 				{{ $t('skills.buttons.prev.text') }}
 			</UButton>
 			<p>{{ $t('skills.title') }}</p>
