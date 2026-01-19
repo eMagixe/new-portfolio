@@ -435,12 +435,12 @@ const _routes = [
   {
     name: "projects___ru",
     path: "/projects",
-    component: () => import('./projects-muoQU_8H.mjs')
+    component: () => import('./projects-DKBo8VZF.mjs')
   },
   {
     name: "projects___en",
     path: "/en/projects",
-    component: () => import('./projects-muoQU_8H.mjs')
+    component: () => import('./projects-DKBo8VZF.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -1542,6 +1542,7 @@ const cfg0 = defineAppConfig({
         name: "Sharmed Books",
         image: "",
         quote: "Интерактивные книжки для детей",
+        description: "Проект по созданию интерактивных детских книжек с встроенным редактором и онлайн магазином",
         stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"],
         slug: "charmed-books",
         format: "png",
@@ -1551,25 +1552,28 @@ const cfg0 = defineAppConfig({
         name: "DCLI",
         image: "",
         quote: "Центр лабораторных исследований",
+        description: "Проект по автоматизации и контролю лаболаторных исследований",
         format: "jpg",
         slug: "dcli",
         images: [1, 2, 3, 4],
-        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"]
+        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS", "Chart.js"]
       },
       {
         name: "Kit Tracker",
         image: "",
-        quote: "Отслеживание поставок анализа крови и др",
+        quote: "Отслеживание поставок анализа крови",
+        description: "Проект по отслеживанию и контролю полного пути следоваания анализов",
         format: "jpg",
         slug: "kit",
         images: [1, 2, 3],
-        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"]
+        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS", "Chart.js"]
       },
       {
         name: "Raimbek",
         image: "",
         quote: "Первый казахский молочный завод",
-        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"],
+        description: "Первый завод Казахстана по производству соков спиртоводочных изделий и молока",
+        stack: ["Vue.js", "Tailwind CSS", "Three.js"],
         slug: "raimbek",
         format: "jpg",
         images: [1, 2]
@@ -1578,6 +1582,7 @@ const cfg0 = defineAppConfig({
         name: "Portal",
         image: "",
         quote: "Интернет магазин книг по изотерике",
+        description: "Портал по созданию и продаже книг и статей по эзотерике и духовным практикам",
         slug: "portal",
         format: "png",
         images: [1, 2],
@@ -1586,7 +1591,8 @@ const cfg0 = defineAppConfig({
       {
         name: "IdoArt",
         image: "",
-        quote: "Портал по продаже курсов и обучающих материалов",
+        quote: "Сайт по продаже курсов и обучающих материалов",
+        description: "Продажа создание и просмотр видео курсов по исскуству и рисованию",
         slug: "idoArt",
         format: "png",
         images: [1, 2, 3],
@@ -1596,10 +1602,11 @@ const cfg0 = defineAppConfig({
         name: "Русхимальянс",
         image: "",
         quote: "Газоперерабатывающий завод в России",
+        description: "Новый дизайн газоперерабатывающего завода",
         slug: "rca",
         format: "png",
         images: [1, 2],
-        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"]
+        stack: ["BEM", "JavaScript", "Tailwind CSS"]
       }
     ]
   },
@@ -1799,6 +1806,7 @@ const cfg0 = defineAppConfig({
         name: "Sharmed Books",
         image: "",
         quote: "Interactive books for children",
+        description: "A project to create interactive children's books with a built-in editor and an online store",
         stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"],
         slug: "charmed-books",
         format: "png",
@@ -1808,25 +1816,28 @@ const cfg0 = defineAppConfig({
         name: "DCLI",
         image: "",
         quote: "Laboratory Research Center",
+        description: "A project for automating and managing laboratory research",
         format: "jpg",
         slug: "dcli",
         images: [1, 2, 3, 4],
-        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"]
+        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS", "Chart.js"]
       },
       {
         name: "Kit Tracker",
         image: "",
-        quote: "Tracking deliveries of blood tests and more",
+        quote: "Blood test kit tracking",
+        description: "A project for tracking and managing the full lifecycle of blood test samples",
         format: "jpg",
         slug: "kit",
         images: [1, 2, 3],
-        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"]
+        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS", "Chart.js"]
       },
       {
         name: "Raimbek",
         image: "",
         quote: "The first Kazakh dairy plant",
-        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"],
+        description: "The first plant in Kazakhstan for the production of juices, alcoholic beverages, and dairy products",
+        stack: ["Vue.js", "Tailwind CSS", "Three.js"],
         slug: "raimbek",
         format: "jpg",
         images: [1, 2]
@@ -1834,7 +1845,8 @@ const cfg0 = defineAppConfig({
       {
         name: "Portal",
         image: "",
-        quote: "Online store of esoteric books",
+        quote: "Online store for esoteric books",
+        description: "A portal for creating and selling books and articles on esotericism and spiritual practices",
         slug: "portal",
         format: "png",
         images: [1, 2],
@@ -1843,7 +1855,8 @@ const cfg0 = defineAppConfig({
       {
         name: "IdoArt",
         image: "",
-        quote: "Portal for selling courses and educational materials",
+        quote: "Website for selling courses and educational materials",
+        description: "Platform for selling, creating, and viewing video courses on art and drawing",
         slug: "idoArt",
         format: "png",
         images: [1, 2, 3],
@@ -1852,11 +1865,12 @@ const cfg0 = defineAppConfig({
       {
         name: "Ruskhimalyans",
         image: "",
-        quote: "Russian gas processing plant",
+        quote: "Gas processing plant in Russia",
+        description: "A new design for a gas processing plant",
         slug: "rca",
         format: "png",
         images: [1, 2],
-        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"]
+        stack: ["BEM", "JavaScript", "Tailwind CSS"]
       }
     ]
   },
@@ -2305,7 +2319,7 @@ function createNuxtI18nContext(nuxt, vueI18n, defaultLocale) {
       return;
     }
     const headers = getLocaleConfig(locale)?.cacheable ? {} : { "Cache-Control": "no-cache" };
-    const messages = await $fetch(`${"/_i18n/Dc5h6_-R"}/${locale}/messages.json`, { headers });
+    const messages = await $fetch(`${"/_i18n/MQJk2CCu"}/${locale}/messages.json`, { headers });
     for (const k of Object.keys(messages)) {
       i18n.mergeLocaleMessage(k, messages[k]);
     }
@@ -6563,7 +6577,7 @@ const i18n_EI7LsD1KYQADczz5hrChviGQCdVM8yUkvFEZLJpmnvM = /* @__PURE__ */ defineN
     {
       localeConfigs.value = useRequestEvent().context.nuxtI18n?.localeConfigs || {};
     }
-    prerenderRoutes(localeCodes.map((locale) => `${"/_i18n/Dc5h6_-R"}/${locale}/messages.json`));
+    prerenderRoutes(localeCodes.map((locale) => `${"/_i18n/MQJk2CCu"}/${locale}/messages.json`));
     const i18n = createI18n(optionsI18n);
     const detectors = useDetectors(useRequestEvent(nuxt), useI18nDetection(nuxt), nuxt);
     const ctx = createNuxtI18nContext(nuxt, i18n, optionsI18n.defaultLocale);

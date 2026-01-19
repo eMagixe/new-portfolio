@@ -1,7 +1,8 @@
-import { _ as _sfc_main$6, a as _sfc_main$5, t as tv } from './Button-GqGlf87S.mjs';
+import { _ as _sfc_main$6, a as _sfc_main$7, t as tv } from './Button-GqGlf87S.mjs';
 import { _ as _sfc_main$2 } from './PageHeader-CHx2fFk4.mjs';
 import { _ as _sfc_main$3 } from './Marquee-C2nShsEu.mjs';
 import { _ as _sfc_main$4 } from './PageCard-CHHMSbkP.mjs';
+import { _ as _sfc_main$5 } from './Tooltip-D4MhE30v.mjs';
 import { defineComponent, computed, ref, withCtx, unref, createVNode, toDisplayString, createBlock, openBlock, Fragment, renderList, createTextVNode, watch, mergeProps, createCommentVNode, renderSlot, useSSRContext } from 'vue';
 import { ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr, ssrRenderClass, ssrRenderAttrs, ssrRenderSlot } from 'vue/server-renderer';
 import useEmblaCarousel from 'embla-carousel-vue';
@@ -235,7 +236,7 @@ const _sfc_main$1 = {
               _push2(`<div data-slot="controls" class="${ssrRenderClass(ui.value.controls({ class: props.ui?.controls }))}"${_scopeId}>`);
               if (__props.arrows) {
                 _push2(`<div data-slot="arrows" class="${ssrRenderClass(ui.value.arrows({ class: props.ui?.arrows }))}"${_scopeId}>`);
-                _push2(ssrRenderComponent(_sfc_main$5, mergeProps({
+                _push2(ssrRenderComponent(_sfc_main$7, mergeProps({
                   disabled: !canScrollPrev.value,
                   icon: prevIcon.value,
                   color: "neutral",
@@ -246,7 +247,7 @@ const _sfc_main$1 = {
                   class: ui.value.prev({ class: props.ui?.prev }),
                   onClick: scrollPrev
                 }), null, _parent2, _scopeId));
-                _push2(ssrRenderComponent(_sfc_main$5, mergeProps({
+                _push2(ssrRenderComponent(_sfc_main$7, mergeProps({
                   disabled: !canScrollNext.value,
                   icon: nextIcon.value,
                   color: "neutral",
@@ -309,7 +310,7 @@ const _sfc_main$1 = {
                   "data-slot": "arrows",
                   class: ui.value.arrows({ class: props.ui?.arrows })
                 }, [
-                  createVNode(_sfc_main$5, mergeProps({
+                  createVNode(_sfc_main$7, mergeProps({
                     disabled: !canScrollPrev.value,
                     icon: prevIcon.value,
                     color: "neutral",
@@ -320,7 +321,7 @@ const _sfc_main$1 = {
                     class: ui.value.prev({ class: props.ui?.prev }),
                     onClick: scrollPrev
                   }), null, 16, ["disabled", "icon", "aria-label", "class"]),
-                  createVNode(_sfc_main$5, mergeProps({
+                  createVNode(_sfc_main$7, mergeProps({
                     disabled: !canScrollNext.value,
                     icon: nextIcon.value,
                     color: "neutral",
@@ -396,8 +397,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       const _component_UPageHeader = _sfc_main$2;
       const _component_UMarquee = _sfc_main$3;
       const _component_UPageCard = _sfc_main$4;
+      const _component_UTooltip = _sfc_main$5;
       const _component_UCarousel = _sfc_main$1;
-      const _component_UButton = _sfc_main$5;
+      const _component_UButton = _sfc_main$7;
       _push(ssrRenderComponent(_component_UContainer, _attrs, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -416,19 +418,47 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                   ssrRenderList(unref(projects), (project, index) => {
                     _push3(ssrRenderComponent(_component_UPageCard, {
                       key: index,
-                      description: project.quote,
                       ui: {
                         description: "line-clamp-3"
                       },
-                      class: "w-64 shrink-0 cursor-pointer",
+                      class: "w-64 h-42 shrink-0 cursor-pointer",
                       onClick: ($event) => currentProjectSlug.value = project.slug
                     }, {
                       header: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(`<h3 class="text-[14px] font-semibold"${_scopeId3}>${ssrInterpolate(project.name)}</h3>`);
+                          _push4(`<h3 class="font-semibold"${_scopeId3}>${ssrInterpolate(project.name)}</h3>`);
                         } else {
                           return [
-                            createVNode("h3", { class: "text-[14px] font-semibold" }, toDisplayString(project.name), 1)
+                            createVNode("h3", { class: "font-semibold" }, toDisplayString(project.name), 1)
+                          ];
+                        }
+                      }),
+                      body: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(ssrRenderComponent(_component_UTooltip, {
+                            text: project.description
+                          }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(`<p class="text-[14px]"${_scopeId4}>${ssrInterpolate(project.quote)}</p>`);
+                              } else {
+                                return [
+                                  createVNode("p", { class: "text-[14px]" }, toDisplayString(project.quote), 1)
+                                ];
+                              }
+                            }),
+                            _: 2
+                          }, _parent4, _scopeId3));
+                        } else {
+                          return [
+                            createVNode(_component_UTooltip, {
+                              text: project.description
+                            }, {
+                              default: withCtx(() => [
+                                createVNode("p", { class: "text-[14px]" }, toDisplayString(project.quote), 1)
+                              ]),
+                              _: 2
+                            }, 1032, ["text"])
                           ];
                         }
                       }),
@@ -450,28 +480,37 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     (openBlock(true), createBlock(Fragment, null, renderList(unref(projects), (project, index) => {
                       return openBlock(), createBlock(_component_UPageCard, {
                         key: index,
-                        description: project.quote,
                         ui: {
                           description: "line-clamp-3"
                         },
-                        class: "w-64 shrink-0 cursor-pointer",
+                        class: "w-64 h-42 shrink-0 cursor-pointer",
                         onClick: ($event) => currentProjectSlug.value = project.slug
                       }, {
                         header: withCtx(() => [
-                          createVNode("h3", { class: "text-[14px] font-semibold" }, toDisplayString(project.name), 1)
+                          createVNode("h3", { class: "font-semibold" }, toDisplayString(project.name), 1)
+                        ]),
+                        body: withCtx(() => [
+                          createVNode(_component_UTooltip, {
+                            text: project.description
+                          }, {
+                            default: withCtx(() => [
+                              createVNode("p", { class: "text-[14px]" }, toDisplayString(project.quote), 1)
+                            ]),
+                            _: 2
+                          }, 1032, ["text"])
                         ]),
                         footer: withCtx(() => [
                           createVNode("p", { class: "text-[12px]" }, toDisplayString(project.stack.join(", ")), 1)
                         ]),
                         _: 2
-                      }, 1032, ["description", "onClick"]);
+                      }, 1032, ["onClick"]);
                     }), 128))
                   ];
                 }
               }),
               _: 1
             }, _parent2, _scopeId));
-            _push2(`<div class="w-full bg-neutral-100 px-4 py-2 my-5"${_scopeId}>${ssrInterpolate(unref(selectedProject)?.name)} - ${ssrInterpolate(unref(selectedProject)?.quote)}</div>`);
+            _push2(`<div class="w-full bg-neutral-100 px-4 py-2 my-5"${_scopeId}>${ssrInterpolate(unref(selectedProject)?.name)} - ${ssrInterpolate(unref(selectedProject)?.description)}</div>`);
             _push2(ssrRenderComponent(_component_UCarousel, {
               "class-names": "",
               arrows: "",
@@ -545,26 +584,35 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                   (openBlock(true), createBlock(Fragment, null, renderList(unref(projects), (project, index) => {
                     return openBlock(), createBlock(_component_UPageCard, {
                       key: index,
-                      description: project.quote,
                       ui: {
                         description: "line-clamp-3"
                       },
-                      class: "w-64 shrink-0 cursor-pointer",
+                      class: "w-64 h-42 shrink-0 cursor-pointer",
                       onClick: ($event) => currentProjectSlug.value = project.slug
                     }, {
                       header: withCtx(() => [
-                        createVNode("h3", { class: "text-[14px] font-semibold" }, toDisplayString(project.name), 1)
+                        createVNode("h3", { class: "font-semibold" }, toDisplayString(project.name), 1)
+                      ]),
+                      body: withCtx(() => [
+                        createVNode(_component_UTooltip, {
+                          text: project.description
+                        }, {
+                          default: withCtx(() => [
+                            createVNode("p", { class: "text-[14px]" }, toDisplayString(project.quote), 1)
+                          ]),
+                          _: 2
+                        }, 1032, ["text"])
                       ]),
                       footer: withCtx(() => [
                         createVNode("p", { class: "text-[12px]" }, toDisplayString(project.stack.join(", ")), 1)
                       ]),
                       _: 2
-                    }, 1032, ["description", "onClick"]);
+                    }, 1032, ["onClick"]);
                   }), 128))
                 ]),
                 _: 1
               }),
-              createVNode("div", { class: "w-full bg-neutral-100 px-4 py-2 my-5" }, toDisplayString(unref(selectedProject)?.name) + " - " + toDisplayString(unref(selectedProject)?.quote), 1),
+              createVNode("div", { class: "w-full bg-neutral-100 px-4 py-2 my-5" }, toDisplayString(unref(selectedProject)?.name) + " - " + toDisplayString(unref(selectedProject)?.description), 1),
               createVNode(_component_UCarousel, {
                 "class-names": "",
                 arrows: "",
@@ -621,4 +669,4 @@ _sfc_main.setup = (props, ctx) => {
 };
 
 export { _sfc_main as default };
-//# sourceMappingURL=projects-muoQU_8H.mjs.map
+//# sourceMappingURL=projects-DKBo8VZF.mjs.map
