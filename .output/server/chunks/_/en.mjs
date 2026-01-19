@@ -39,7 +39,7 @@ var jobs = {
 	}
 };
 var skills = {
-	title: "Skills and Technologies",
+	title: "Skills",
 	subtitle: {
 		first: "Primary tools",
 		second: "Additional tools"

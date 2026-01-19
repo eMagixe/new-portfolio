@@ -40,7 +40,7 @@ const resource = {
     }
   },
   "skills": {
-    "title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Skills and Technologies" } },
+    "title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Skills" } },
     "subtitle": {
       "first": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Primary tools" } },
       "second": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Additional tools" } }
@@ -127,4 +127,4 @@ const resource = {
 };
 
 export { resource as default };
-//# sourceMappingURL=en-Dfyo-OUH.mjs.map
+//# sourceMappingURL=en-Ff8c7D6s.mjs.map
