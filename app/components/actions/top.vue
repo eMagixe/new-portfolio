@@ -17,7 +17,7 @@ const main = computed(() => {
 
 <template>
 	<UHeader toggle-side="left">
-		<template #title>
+		<template #left>
 			<ActionsLogo />
 		</template>
 

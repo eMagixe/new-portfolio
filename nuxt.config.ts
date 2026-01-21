@@ -3,6 +3,9 @@ export default defineNuxtConfig({
 	compatibilityDate: '2025-07-15',
 	css: ['~/assets/css/main.css'],
 	modules: ['@nuxt/ui', '@nuxtjs/i18n'],
+	icon: {
+		serverBundle: 'local'
+	},
 	devtools: { enabled: false },
 	ui: {
 		colorMode: false
@@ -14,5 +17,5 @@ export default defineNuxtConfig({
 			{ code: 'en', name: 'English', file: 'en.json' }
 		]
 	},
-	ssr: false
+	ssr: true
 })
