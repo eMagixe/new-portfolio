@@ -40,6 +40,7 @@ useSeoMeta({
 				:placeholder="['auto']"
 				loading="lazy"
 				class="mx-auto rounded-[50%] object-cover"
+				@click="navigateTo('/about')"
 			/>
 		</div>
 		<UPageBody>

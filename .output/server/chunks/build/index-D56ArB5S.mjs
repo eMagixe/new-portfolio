@@ -2,7 +2,7 @@ import { defineComponent, ref, withCtx, unref, createVNode, toDisplayString, use
 import { ssrRenderComponent, ssrInterpolate, ssrRenderSlot, ssrRenderClass, ssrRenderList } from 'vue/server-renderer';
 import { Primitive, Slot } from 'reka-ui';
 import { d as __nuxt_component_6, c as _sfc_main$6$1, t as tv, _ as _sfc_main$7, a as _sfc_main$8, g as getSlotChildrenText, e as _sfc_main$1$1 } from './Button-pI9NwlN0.mjs';
-import { b as useI18n, c as useSeoMeta, a as useAppConfig } from './server.mjs';
+import { b as useI18n, c as useSeoMeta, n as navigateTo, a as useAppConfig } from './server.mjs';
 import { _ as _sfc_main$5 } from './Marquee-J49Cs4Ni.mjs';
 import { _ as _sfc_main$6 } from './Tooltip-BTatHHZW.mjs';
 import '../nitro/nitro.mjs';
@@ -929,7 +929,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               preload: "",
               placeholder: ["auto"],
               loading: "lazy",
-              class: "mx-auto rounded-[50%] object-cover"
+              class: "mx-auto rounded-[50%] object-cover",
+              onClick: ($event) => ("navigateTo" in _ctx ? _ctx.navigateTo : unref(navigateTo))("/about")
             }, null, _parent2, _scopeId));
             _push2(`</div>`);
             _push2(ssrRenderComponent(_component_UPageBody, null, {
@@ -1247,8 +1248,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                   preload: "",
                   placeholder: ["auto"],
                   loading: "lazy",
-                  class: "mx-auto rounded-[50%] object-cover"
-                })
+                  class: "mx-auto rounded-[50%] object-cover",
+                  onClick: ($event) => ("navigateTo" in _ctx ? _ctx.navigateTo : unref(navigateTo))("/about")
+                }, null, 8, ["onClick"])
               ]),
               createVNode(_component_UPageBody, null, {
                 default: withCtx(() => [
@@ -1354,4 +1356,4 @@ _sfc_main.setup = (props, ctx) => {
 };
 
 export { _sfc_main as default };
-//# sourceMappingURL=index-D6mH6qF4.mjs.map
+//# sourceMappingURL=index-D56ArB5S.mjs.map
