@@ -48,7 +48,8 @@ useSeoMeta({
 			:ui="{ root: '[--gap:--spacing(4)] my-5', content: 'w-auto py-1' }"
 		>
 			<UPageCard
-				v-for="(project, index) in projects" :key="index"
+				v-for="(project, index) in projects"
+				:key="index"
 				:ui="{
 					description: 'line-clamp-3'
 				}"
@@ -76,7 +77,14 @@ useSeoMeta({
 		</div>
 
 		<UCarousel v-slot="{ item }" class-names arrows :items="images" class="mx-auto w-full mb-5">
-			<img :alt="currentProjectSlug" :src="item" class="rounded-lg max-h-[620px] mx-auto object-cover" />
+			<NuxtImg
+				:alt="currentProjectSlug"
+				:src="item"
+				preload
+				:placeholder="['auto']"
+				loading="lazy"
+				class="mx-auto w-full object-cover"
+			/>
 		</UCarousel>
 
 		<div class="actions flex flex-row justify-between items-center w-full mb-10">
