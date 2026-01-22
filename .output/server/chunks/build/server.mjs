@@ -1,6 +1,6 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import * as Vue from 'vue';
 import { defineComponent, hasInjectionContext, inject, toRef, isRef, ref, h, Suspense, shallowRef, computed, provide, shallowReactive, Fragment, getCurrentInstance as getCurrentInstance$1, defineAsyncComponent, createElementBlock, cloneVNode, unref, createApp, createVNode, Text, onErrorCaptured, onServerPrefetch, resolveDynamicComponent, reactive, effectScope, isReadonly, isShallow, isReactive, toRaw, mergeProps, getCurrentScope, withCtx, nextTick, useSSRContext } from 'vue';
-import { s as defuFn, t as klona, m as createError$1, v as hasProtocol, w as isScriptProtocol, x as joinURL, y as withQuery, z as sanitizeStatusCode, A as getContext, $ as $fetch$1, B as baseURL, C as createHooks, D as executeAsync, E as toRouteMatcher, F as createRouter$1, G as defu, H as getRequestURL, I as getCookie, J as getRequestHeader, o as destr, K as createDefu, L as parse$1, M as isEqual, N as withoutTrailingSlash, O as parsePath, P as parseQuery, Q as setCookie, R as deleteCookie, S as isEqual$1 } from '../nitro/nitro.mjs';
+import { s as defuFn, t as klona, v as hasProtocol, w as isScriptProtocol, x as joinURL, m as createError$1, y as withQuery, z as sanitizeStatusCode, A as getContext, $ as $fetch$1, B as baseURL, C as createHooks, D as executeAsync, E as toRouteMatcher, F as createRouter$1, G as defu, H as getRequestURL, I as getCookie, J as getRequestHeader, o as destr, K as createDefu, L as parse$1, M as isEqual, N as withoutTrailingSlash, O as parsePath, P as parseQuery, Q as setCookie, R as deleteCookie, S as isEqual$1 } from '../nitro/nitro.mjs';
 import { RouterView, useRoute as useRoute$1, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
 import colors from 'tailwindcss/colors';
 import { _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
@@ -16,6 +16,7 @@ import 'node:crypto';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
+import 'ipx';
 import 'vue-bundle-renderer/runtime';
 import 'unhead/server';
 import 'devalue';
@@ -395,52 +396,52 @@ const _routes = [
   {
     name: "jobs___ru",
     path: "/jobs",
-    component: () => import('./jobs-CgSP1FAP.mjs')
+    component: () => import('./jobs-B9maM8i_.mjs')
   },
   {
     name: "jobs___en",
     path: "/en/jobs",
-    component: () => import('./jobs-CgSP1FAP.mjs')
+    component: () => import('./jobs-B9maM8i_.mjs')
   },
   {
     name: "about___ru",
     path: "/about",
-    component: () => import('./about-B745ywLU.mjs')
+    component: () => import('./about-DjLbSmQ0.mjs')
   },
   {
     name: "about___en",
     path: "/en/about",
-    component: () => import('./about-B745ywLU.mjs')
+    component: () => import('./about-DjLbSmQ0.mjs')
   },
   {
     name: "index___ru",
     path: "/",
-    component: () => import('./index-DTNWbKEA.mjs')
+    component: () => import('./index-DswjYp5h.mjs')
   },
   {
     name: "index___en",
     path: "/en",
-    component: () => import('./index-DTNWbKEA.mjs')
+    component: () => import('./index-DswjYp5h.mjs')
   },
   {
     name: "skills___ru",
     path: "/skills",
-    component: () => import('./skills-Jt2yhiSD.mjs')
+    component: () => import('./skills-Cknrnv4v.mjs')
   },
   {
     name: "skills___en",
     path: "/en/skills",
-    component: () => import('./skills-Jt2yhiSD.mjs')
+    component: () => import('./skills-Cknrnv4v.mjs')
   },
   {
     name: "projects___ru",
     path: "/projects",
-    component: () => import('./projects-DKBo8VZF.mjs')
+    component: () => import('./projects-CRG9DDEt.mjs')
   },
   {
     name: "projects___en",
     path: "/en/projects",
-    component: () => import('./projects-DKBo8VZF.mjs')
+    component: () => import('./projects-CRG9DDEt.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -799,7 +800,7 @@ const revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms = /* @__
     }
   }
 });
-const LazyIcon = defineAsyncComponent(() => import('./index-DIr8QGQd.mjs').then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./index-Dj096EhE.mjs').then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
@@ -2319,7 +2320,7 @@ function createNuxtI18nContext(nuxt, vueI18n, defaultLocale) {
       return;
     }
     const headers = getLocaleConfig(locale)?.cacheable ? {} : { "Cache-Control": "no-cache" };
-    const messages = await $fetch(`${"/_i18n/CwdbFpoo"}/${locale}/messages.json`, { headers });
+    const messages = await $fetch(`${"/_i18n/QXGEXALL"}/${locale}/messages.json`, { headers });
     for (const k of Object.keys(messages)) {
       i18n.mergeLocaleMessage(k, messages[k]);
     }
@@ -6577,7 +6578,7 @@ const i18n_EI7LsD1KYQADczz5hrChviGQCdVM8yUkvFEZLJpmnvM = /* @__PURE__ */ defineN
     {
       localeConfigs.value = useRequestEvent().context.nuxtI18n?.localeConfigs || {};
     }
-    prerenderRoutes(localeCodes.map((locale) => `${"/_i18n/CwdbFpoo"}/${locale}/messages.json`));
+    prerenderRoutes(localeCodes.map((locale) => `${"/_i18n/QXGEXALL"}/${locale}/messages.json`));
     const i18n = createI18n(optionsI18n);
     const detectors = useDetectors(useRequestEvent(nuxt), useI18nDetection(nuxt), nuxt);
     const ctx = createNuxtI18nContext(nuxt, i18n, optionsI18n.defaultLocale);
@@ -6751,7 +6752,7 @@ const plugins = [
   ssg_detect_IpHCGcQQ_IR5Rl99qyukWoMA9fJGfuTYyoksTzy81cs
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import('./default-TwWhYty1.mjs').then((m) => m.default || m))
+  default: defineAsyncComponent(() => import('./default-BPEGVj0P.mjs').then((m) => m.default || m))
 };
 const LayoutLoader = defineComponent({
   name: "LayoutLoader",
@@ -7018,7 +7019,7 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-DaRSLeo2.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-C4TlAg3S.mjs'));
     const _Error = defineAsyncComponent(() => import('./error-500-CYIAFFP6.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
@@ -7100,5 +7101,5 @@ let entry;
 }
 const entry_default = (ssrContext) => entry(ssrContext);
 
-export { _export_sfc as _, useAppConfig as a, useI18n as b, useSeoMeta as c, useRoute as d, entry_default as default, useState as e, __nuxt_component_3 as f, appConfig as g, useRouter as h, useNuxtApp as i, useRuntimeConfig as j, nuxtLinkDefaults as k, asyncDataDefaults as l, createError as m, navigateTo as n, resolveRouteObject as r, useHead as u };
+export { _export_sfc as _, useAppConfig as a, useI18n as b, useSeoMeta as c, useRoute as d, entry_default as default, useState as e, __nuxt_component_3 as f, appConfig as g, useNuxtApp as h, useRuntimeConfig as i, useRequestEvent as j, useRouter as k, nuxtLinkDefaults as l, asyncDataDefaults as m, navigateTo as n, createError as o, resolveRouteObject as r, useHead as u };
 //# sourceMappingURL=server.mjs.map

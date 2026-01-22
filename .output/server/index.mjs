@@ -1,6 +1,6 @@
 import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import 'node:http';
 import 'node:https';
-export { V as default } from './chunks/nitro/nitro.mjs';
+export { Z as default } from './chunks/nitro/nitro.mjs';
 import 'node:events';
 import 'node:buffer';
 import 'node:fs';
@@ -10,4 +10,5 @@ import 'vue-router';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
+import 'ipx';
 //# sourceMappingURL=index.mjs.map

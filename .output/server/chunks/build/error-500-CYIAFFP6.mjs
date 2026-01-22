@@ -13,6 +13,7 @@ import 'vue-router';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
+import 'ipx';
 import 'tailwindcss/colors';
 import '@iconify/vue';
 import '../routes/renderer.mjs';
