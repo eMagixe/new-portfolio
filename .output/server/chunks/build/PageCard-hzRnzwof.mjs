@@ -2,7 +2,7 @@ import { useSlots, ref, computed, watch, unref, mergeProps, withCtx, createVNode
 import { ssrRenderComponent, ssrRenderClass, ssrRenderSlot, ssrInterpolate } from 'vue/server-renderer';
 import { Primitive } from 'reka-ui';
 import { pausableFilter, useMouseInElement } from '@vueuse/core';
-import { t as tv, g as getSlotChildrenText, c as _sfc_main$6, d as _sfc_main$1 } from './Button-pI9NwlN0.mjs';
+import { t as tv, g as getSlotChildrenText, c as _sfc_main$6, e as _sfc_main$1 } from './Button-pI9NwlN0.mjs';
 import { a as useAppConfig } from './server.mjs';
 
 const theme = {

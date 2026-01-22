@@ -32,8 +32,15 @@ useSeoMeta({
 
 <template>
 	<UPage>
-		<div class="flex flex-col justify-center items-center mt-10">
-			<UAvatar src="/images/photo.jpg" size="3xl" />
+		<div class="flex flex-col justify-center items-center mt-10 photo">
+			<NuxtImg
+				alt="photo"
+				src="/images/photo.jpg"
+				preload
+				:placeholder="['auto']"
+				loading="lazy"
+				class="mx-auto rounded-[50%] object-cover"
+			/>
 		</div>
 		<UPageBody>
 			<UPageSection

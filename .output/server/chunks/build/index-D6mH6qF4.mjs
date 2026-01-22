@@ -1,7 +1,7 @@
 import { defineComponent, ref, withCtx, unref, createVNode, toDisplayString, useSlots, computed, mergeProps, renderSlot, createBlock, createCommentVNode, openBlock, createTextVNode, Fragment, renderList, useSSRContext } from 'vue';
 import { ssrRenderComponent, ssrInterpolate, ssrRenderSlot, ssrRenderClass, ssrRenderList } from 'vue/server-renderer';
 import { Primitive, Slot } from 'reka-ui';
-import { b as _sfc_main$3$1, c as _sfc_main$6$1, t as tv, _ as _sfc_main$7, a as _sfc_main$8, g as getSlotChildrenText, d as _sfc_main$1$1 } from './Button-pI9NwlN0.mjs';
+import { d as __nuxt_component_6, c as _sfc_main$6$1, t as tv, _ as _sfc_main$7, a as _sfc_main$8, g as getSlotChildrenText, e as _sfc_main$1$1 } from './Button-pI9NwlN0.mjs';
 import { b as useI18n, c as useSeoMeta, a as useAppConfig } from './server.mjs';
 import { _ as _sfc_main$5 } from './Marquee-J49Cs4Ni.mjs';
 import { _ as _sfc_main$6 } from './Tooltip-BTatHHZW.mjs';
@@ -913,7 +913,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UPage = _sfc_main$4;
-      const _component_UAvatar = _sfc_main$3$1;
+      const _component_NuxtImg = __nuxt_component_6;
       const _component_UPageBody = _sfc_main$3;
       const _component_UPageSection = _sfc_main$1;
       const _component_UMarquee = _sfc_main$5;
@@ -922,10 +922,14 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       _push(ssrRenderComponent(_component_UPage, _attrs, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="flex flex-col justify-center items-center mt-10"${_scopeId}>`);
-            _push2(ssrRenderComponent(_component_UAvatar, {
+            _push2(`<div class="flex flex-col justify-center items-center mt-10 photo"${_scopeId}>`);
+            _push2(ssrRenderComponent(_component_NuxtImg, {
+              alt: "photo",
               src: "/images/photo.jpg",
-              size: "3xl"
+              preload: "",
+              placeholder: ["auto"],
+              loading: "lazy",
+              class: "mx-auto rounded-[50%] object-cover"
             }, null, _parent2, _scopeId));
             _push2(`</div>`);
             _push2(ssrRenderComponent(_component_UPageBody, null, {
@@ -1236,10 +1240,14 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode("div", { class: "flex flex-col justify-center items-center mt-10" }, [
-                createVNode(_component_UAvatar, {
+              createVNode("div", { class: "flex flex-col justify-center items-center mt-10 photo" }, [
+                createVNode(_component_NuxtImg, {
+                  alt: "photo",
                   src: "/images/photo.jpg",
-                  size: "3xl"
+                  preload: "",
+                  placeholder: ["auto"],
+                  loading: "lazy",
+                  class: "mx-auto rounded-[50%] object-cover"
                 })
               ]),
               createVNode(_component_UPageBody, null, {
@@ -1346,4 +1354,4 @@ _sfc_main.setup = (props, ctx) => {
 };
 
 export { _sfc_main as default };
-//# sourceMappingURL=index-DswjYp5h.mjs.map
+//# sourceMappingURL=index-D6mH6qF4.mjs.map
