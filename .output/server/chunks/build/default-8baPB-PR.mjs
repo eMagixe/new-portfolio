@@ -5679,43 +5679,68 @@ _sfc_main$d.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/NavigationMenu.vue");
   return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
 };
-const _sfc_main$c = {};
-function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
-  const _component_UButton = _sfc_main$l;
-  _push(`<!--[-->`);
-  _push(ssrRenderComponent(_component_UButton, {
-    icon: "i-simple-icons-telegram",
-    color: "neutral",
-    variant: "ghost",
-    to: "https://t.me/max_magixe",
-    target: "_blank",
-    "aria-label": "Telegram"
-  }, null, _parent));
-  _push(ssrRenderComponent(_component_UButton, {
-    icon: "i-simple-icons-gmail",
-    color: "neutral",
-    variant: "ghost",
-    to: "mailto:emax.mails@gmail.com",
-    target: "_blank",
-    "aria-label": "X"
-  }, null, _parent));
-  _push(ssrRenderComponent(_component_UButton, {
-    icon: "i-simple-icons-github",
-    color: "neutral",
-    variant: "ghost",
-    to: "https://github.com/emagixe",
-    target: "_blank",
-    "aria-label": "GitHub"
-  }, null, _parent));
-  _push(`<!--]-->`);
-}
+const _sfc_main$c = /* @__PURE__ */ defineComponent({
+  __name: "contacts",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const { locale } = useI18n();
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_UButton = _sfc_main$l;
+      _push(`<!--[-->`);
+      _push(ssrRenderComponent(_component_UButton, {
+        icon: "i-simple-icons-telegram",
+        color: "neutral",
+        variant: "ghost",
+        to: "https://t.me/max_magixe",
+        target: "_blank",
+        "aria-label": "Telegram"
+      }, null, _parent));
+      _push(ssrRenderComponent(_component_UButton, {
+        icon: "i-simple-icons-gmail",
+        color: "neutral",
+        variant: "ghost",
+        to: "mailto:emax.mails@gmail.com",
+        target: "_blank",
+        "aria-label": "X"
+      }, null, _parent));
+      _push(ssrRenderComponent(_component_UButton, {
+        icon: "i-simple-icons-github",
+        color: "neutral",
+        variant: "ghost",
+        to: "https://github.com/emagixe",
+        target: "_blank",
+        "aria-label": "GitHub"
+      }, null, _parent));
+      if (unref(locale) === "ru") {
+        _push(ssrRenderComponent(_component_UButton, {
+          icon: "i-lucide-download",
+          color: "neutral",
+          variant: "ghost",
+          to: "https://hh.ru/resume_converter/%D0%95%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%20%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87.pdf?hash=55584c38ff0768026f0039ed1f70326b666538&type=pdf&hhtmFrom=&hhtmSource=resume",
+          target: "_blank",
+          "aria-label": "Download PDF"
+        }, null, _parent));
+      } else {
+        _push(ssrRenderComponent(_component_UButton, {
+          icon: "i-lucide-download",
+          color: "neutral",
+          variant: "ghost",
+          to: "https://hh.ru/resume_converter/%D0%95%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%20%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87.pdf?hash=55584c38ff0768026f0039ed1f70326b666538&type=pdf&hhtmFrom=&hhtmSource=resume",
+          target: "_blank",
+          "aria-label": "Download PDF"
+        }, null, _parent));
+      }
+      _push(`<!--]-->`);
+    };
+  }
+});
 const _sfc_setup$c = _sfc_main$c.setup;
 _sfc_main$c.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/actions/contacts.vue");
   return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
 };
-const __nuxt_component_3 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$c, [["ssrRender", _sfc_ssrRender$1]]), { __name: "ActionsContacts" });
+const __nuxt_component_3 = Object.assign(_sfc_main$c, { __name: "ActionsContacts" });
 const theme$5 = {
   "base": "relative",
   "variants": {
@@ -7689,4 +7714,4 @@ _sfc_main.setup = (props, ctx) => {
 const _default = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { _default as default };
-//# sourceMappingURL=default-BPEGVj0P.mjs.map
+//# sourceMappingURL=default-8baPB-PR.mjs.map

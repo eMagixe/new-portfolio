@@ -53,6 +53,7 @@ useSeoMeta({
 				:description="$t('index.description')"
 				:links="links as ButtonProps[]"
 			/>
+
 			<div class="flex flex-col justify-center items-center">
 				<p>{{ $t('index.skills') }}</p>
 				<UMarquee pause-on-hover class="w-[50%] mx-auto mt-10">
