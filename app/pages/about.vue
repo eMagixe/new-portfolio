@@ -37,26 +37,7 @@ useSeoMeta({
 			</NuxtLink>
 		</p>
 
-		<div class="actions flex flex-row justify-between items-center w-full my-10">
-			<UButton
-				icon="i-lucide-arrow-left"
-				:to="$t('about.buttons.prev.to')"
-				color="neutral"
-				variant="outline"
-			>
-				{{ $t('about.buttons.prev.text') }}
-			</UButton>
-			<p>{{ $t('about.title') }}</p>
-			<UButton
-				trailing-icon="i-lucide-arrow-right"
-				:to="$t('about.buttons.next.to')"
-				color="neutral"
-				variant="outline"
-			>
-				{{ $t('about.buttons.next.text') }}
-			</UButton
-			>
-		</div>
+		<ActionsNavigation page="about" class="mt-10" />
 	</UContainer>
 </template>
 

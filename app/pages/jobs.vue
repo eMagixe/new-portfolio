@@ -45,24 +45,6 @@ useSeoMeta({
 			class="mb-10"
 		/>
 
-		<div class="actions flex flex-row justify-between items-center w-full mb-10">
-			<UButton
-				icon="i-lucide-arrow-left"
-				:to="$t('jobs.buttons.prev.to')"
-				color="neutral"
-				variant="outline"
-			>
-				{{ $t('jobs.buttons.prev.text') }}
-			</UButton>
-			<p>{{ $t('jobs.title') }}</p>
-			<UButton
-				trailing-icon="i-lucide-arrow-right"
-				:to="$t('jobs.buttons.next.to')"
-				color="neutral"
-				variant="outline"
-			>
-				{{ $t('jobs.buttons.next.text') }}
-			</UButton>
-		</div>
+		<ActionsNavigation page="jobs" class="mt-10" />
 	</UContainer>
 </template>

@@ -87,19 +87,6 @@ useSeoMeta({
 			/>
 		</UCarousel>
 
-		<div class="actions flex flex-row justify-between items-center w-full mb-10">
-			<UButton icon="i-lucide-arrow-left" :to="$t('projects.buttons.prev.to')" color="neutral" variant="outline">
-				{{ $t('projects.buttons.prev.text') }}
-			</UButton>
-			<p>{{ $t('projects.title') }}</p>
-			<UButton
-				trailing-icon="i-lucide-arrow-right"
-				:to="$t('projects.buttons.next.to')"
-				color="neutral"
-				variant="outline"
-			>
-				{{ $t('projects.buttons.next.text') }}
-			</UButton>
-		</div>
+		<ActionsNavigation page="projects" class="mt-10" />
 	</UContainer>
 </template>
