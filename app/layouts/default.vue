@@ -7,5 +7,5 @@
 			<NuxtPage />
 		</UApp>
 	</UMain>
-	<SectionFooter />
+	<SectionFooter/>
 </template>
