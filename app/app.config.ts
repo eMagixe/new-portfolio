@@ -236,7 +236,7 @@ export default defineAppConfig({
 				description: 'Проект по отслеживанию и контролю полного пути следоваания анализов',
 				format: 'jpg',
 				slug: 'kit',
-				images: [1, 2, 3],
+				images: [1, 2],
 				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS', 'Chart.js']
 			},
 			{
@@ -244,11 +244,10 @@ export default defineAppConfig({
 				image: '',
 				quote: 'Первый казахский молочный завод',
 				description: 'Первый завод Казахстана по производству соков спиртоводочных изделий и молока',
-
 				stack: ['Vue.js', 'Tailwind CSS', 'Three.js'],
 				slug: 'raimbek',
 				format: 'jpg',
-				images: [1, 2]
+				images: [1]
 			},
 			{
 				name: 'Portal',
@@ -257,17 +256,7 @@ export default defineAppConfig({
 				description: 'Портал по созданию и продаже книг и статей по эзотерике и духовным практикам',
 				slug: 'portal',
 				format: 'png',
-				images: [1, 2],
-				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
-			},
-			{
-				name: 'IdoArt',
-				image: '',
-				quote: 'Сайт по продаже курсов и обучающих материалов',
-				description: 'Продажа создание и просмотр видео курсов по исскуству и рисованию',
-				slug: 'idoArt',
-				format: 'png',
-				images: [1, 2, 3],
+				images: [1],
 				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
 			},
 			{
@@ -515,7 +504,7 @@ export default defineAppConfig({
 				description: 'A project for tracking and managing the full lifecycle of blood test samples',
 				format: 'jpg',
 				slug: 'kit',
-				images: [1, 2, 3],
+				images: [1, 2],
 				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS', 'Chart.js']
 			},
 			{
@@ -527,7 +516,7 @@ export default defineAppConfig({
 				stack: ['Vue.js', 'Tailwind CSS', 'Three.js'],
 				slug: 'raimbek',
 				format: 'jpg',
-				images: [1, 2]
+				images: [1]
 			},
 			{
 				name: 'Portal',
@@ -536,17 +525,7 @@ export default defineAppConfig({
 				description: 'A portal for creating and selling books and articles on esotericism and spiritual practices',
 				slug: 'portal',
 				format: 'png',
-				images: [1, 2],
-				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
-			},
-			{
-				name: 'IdoArt',
-				image: '',
-				quote: 'Website for selling courses and educational materials',
-				description: 'Platform for selling, creating, and viewing video courses on art and drawing',
-				slug: 'idoArt',
-				format: 'png',
-				images: [1, 2, 3],
+				images: [1],
 				stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS']
 			},
 			{
