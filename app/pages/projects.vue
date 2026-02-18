@@ -76,7 +76,7 @@ useSeoMeta({
 			{{ selectedProject?.name }} - {{ selectedProject?.description }}
 		</div>
 
-		<UCarousel v-slot="{ item }" class-names arrows :items="images" class="mx-auto w-full mb-5">
+		<UCarousel v-slot="{ item }" class-names :arrows="images.length > 1" :items="images" class="mx-auto w-full mb-5">
 			<NuxtImg
 				:alt="currentProjectSlug"
 				:src="item"

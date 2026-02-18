@@ -1,6 +1,17 @@
 export default {
 	ru: [
 		{
+			name: 'Такси Экспресс',
+			image: '',
+			quote: 'Междугороднее такси (Респеблика Башкортостан)',
+			description:
+				'Lending Page для междугороднего такси предоставляющего перевозки по Башкирии',
+			stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS'],
+			slug: 'express',
+			format: 'png',
+			images: [1]
+		},
+		{
 			name: 'Sharmed Books',
 			image: '',
 			quote: 'Интерактивные книжки для детей',
@@ -63,6 +74,17 @@ export default {
 		}
 	],
 	en: [
+		{
+			name: 'Taxi Express',
+			image: '',
+			quote: 'Intercity taxi (Republic of Bashkortostan)',
+			description:
+				'Landing page for an intercity taxi service providing transportation across Bashkortostan',
+			stack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS'],
+			slug: 'express',
+			format: 'png',
+			images: [1]
+		},
 		{
 			name: 'Sharmed Books',
 			image: '',
