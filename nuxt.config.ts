@@ -7,8 +7,29 @@ export default defineNuxtConfig({
 		serverBundle: 'local'
 	},
 	devtools: { enabled: false },
+	app: {
+		head: {
+			htmlAttrs: {
+				lang: 'ru'
+			},
+			link: [
+				{
+					rel: 'icon',
+					type: 'image/x-icon',
+					href: '/favicon.ico'
+				},
+				{
+					rel: 'canonical',
+					href: 'https://magixe-dev.ru/'
+				}
+			]
+		}
+	},
 	ui: {
-		colorMode: false
+		colorMode: false,
+		experimental: {
+			componentDetection: true
+		}
 	},
 	i18n: {
 		defaultLocale: 'ru',
