@@ -396,52 +396,52 @@ const _routes = [
   {
     name: "jobs___ru",
     path: "/jobs",
-    component: () => import('./jobs-CNfqhSkE.mjs')
+    component: () => import('./jobs-GOpiBPI-.mjs')
   },
   {
     name: "jobs___en",
     path: "/en/jobs",
-    component: () => import('./jobs-CNfqhSkE.mjs')
+    component: () => import('./jobs-GOpiBPI-.mjs')
   },
   {
     name: "about___ru",
     path: "/about",
-    component: () => import('./about-mNsobDS7.mjs')
+    component: () => import('./about-BcNuiYKF.mjs')
   },
   {
     name: "about___en",
     path: "/en/about",
-    component: () => import('./about-mNsobDS7.mjs')
+    component: () => import('./about-BcNuiYKF.mjs')
   },
   {
     name: "index___ru",
     path: "/",
-    component: () => import('./index-B_oKRc1Y.mjs')
+    component: () => import('./index-DC3ogcbo.mjs')
   },
   {
     name: "index___en",
     path: "/en",
-    component: () => import('./index-B_oKRc1Y.mjs')
+    component: () => import('./index-DC3ogcbo.mjs')
   },
   {
     name: "skills___ru",
     path: "/skills",
-    component: () => import('./skills-DD8eTont.mjs')
+    component: () => import('./skills-RiCIRzeI.mjs')
   },
   {
     name: "skills___en",
     path: "/en/skills",
-    component: () => import('./skills-DD8eTont.mjs')
+    component: () => import('./skills-RiCIRzeI.mjs')
   },
   {
     name: "projects___ru",
     path: "/projects",
-    component: () => import('./projects-DxJfNMT7.mjs')
+    component: () => import('./projects-BG_gYJqV.mjs')
   },
   {
     name: "projects___en",
     path: "/en/projects",
-    component: () => import('./projects-DxJfNMT7.mjs')
+    component: () => import('./projects-BG_gYJqV.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -800,7 +800,7 @@ const revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms = /* @__
     }
   }
 });
-const LazyIcon = defineAsyncComponent(() => import('./index-Dj096EhE.mjs').then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./index-DKM7OlAV.mjs').then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
@@ -947,21 +947,21 @@ function getHreflangLinks(options) {
   if (!options.hreflangLinks) {
     return [];
   }
-  const links = [];
+  const links2 = [];
   const localeMap = createLocaleMap(options.locales);
   for (const [language, locale] of localeMap.entries()) {
     const link = getHreflangLink(language, locale, options);
     if (!link) {
       continue;
     }
-    links.push(link);
-    if (options.defaultLocale && options.defaultLocale === locale.code && links[0].hreflang !== "x-default") {
-      links.unshift(
+    links2.push(link);
+    if (options.defaultLocale && options.defaultLocale === locale.code && links2[0].hreflang !== "x-default") {
+      links2.unshift(
         { [options.key]: "i18n-xd", rel: "alternate", href: link.href, hreflang: "x-default" }
       );
     }
   }
-  return links;
+  return links2;
 }
 function getHreflangLink(language, locale, options, routeWithoutQuery = options.strictCanonicals ? options.getRouteWithoutQuery() : void 0) {
   const localePath2 = options.getLocalizedRoute(locale.code, routeWithoutQuery);
@@ -1186,7 +1186,7 @@ const localeLoaders = {
     {
       key: "locale_ru_46json_bd1530a0",
       load: () => import(
-        './ru-Du-cgjvi.mjs'
+        './ru-DiLSNQjY.mjs'
         /* webpackChunkName: "locale_ru_46json_bd1530a0" */
       ),
       cache: true
@@ -1196,7 +1196,7 @@ const localeLoaders = {
     {
       key: "locale_en_46json_5f6bce33",
       load: () => import(
-        './en-Ff8c7D6s.mjs'
+        './en-BVw97gHd.mjs'
         /* webpackChunkName: "locale_en_46json_5f6bce33" */
       ),
       cache: true
@@ -1341,519 +1341,560 @@ function useRequestURL(opts) {
     return getRequestURL(useRequestEvent(), opts);
   }
 }
-const cfg0 = defineAppConfig({
-  global: {
-    meetingLink: "https://cal.com/",
-    email: "ui-pro@nuxt.com",
-    available: true
-  },
-  ru: {
-    sidebar: {
-      links: [
-        [
-          {
-            label: "Главная",
-            to: "/",
-            icon: "i-lucide-home"
-          },
-          {
-            label: "Опыт работы",
-            to: "/jobs",
-            icon: "i-lucide-rocket"
-          },
-          {
-            label: "Навыки",
-            to: "/skills",
-            icon: "i-lucide-code"
-          },
-          {
-            label: "Проекты",
-            to: "/projects",
-            icon: "i-lucide-folder-open"
-          },
-          {
-            label: "Биография",
-            to: "/about",
-            icon: "i-lucide-user"
-          }
-        ]
+const jobs = {
+  ru: [
+    {
+      date: "Ноябрь, 2023",
+      title: "ООО Беллфорд",
+      description: "Middle+ Frontend Developer",
+      skills: [
+        "Разработка SPA/SSR-платформ на Nuxt 3/4",
+        "Работа с Python/Django API",
+        "Работа с Nuxt.js архитектурой, FSD и микросервисной архитектурой",
+        "Разработка и поддержка высоконагруженных CRM систем",
+        "Работа с VueUse, Nuxt UI, PrimeVue, TailwindCSS и другими популярными библиотеками",
+        "TypeScript (Generics, Utility Types, типизация API, типизация компонентов и пропсов)",
+        "Vitest (модульное тестирование компонентов)",
+        "Lighthouse-оптимизация, оптимизация и кеширование запросов"
+      ],
+      icon: "i-lucide-check-circle"
+    },
+    {
+      date: "Сентябрь, 2022",
+      title: "Студия AWA.agency",
+      icon: "i-lucide-check-circle",
+      description: "Middle Frontend Developer",
+      skills: [
+        "Разработка интерфейсов на Nuxt3 / Vue3",
+        "Визуализация данных и форм с PrimeVue и Tailwind CSS",
+        "Разработка и поддержка клиентской части веб-приложения",
+        "Написание тестов и исправление выявленных багов"
       ]
     },
-    jobs: [
+    {
+      date: "Февраль, 2020",
+      title: 'ООО "Авакс"',
+      description: "Junior Fullstack Developer",
+      icon: "i-lucide-check-circle",
+      skills: [
+        "Микросервисы на Node.js + Vue, интеграция с API Laravel",
+        "PHP (Laravel, October CMS). - программирование бизнес логики",
+        "Работа с библиотекамии парсинга Google-таблиц и PDF документов",
+        "Работа с API CDEK и Яндекс Карты",
+        "Боты для Telegram, VK"
+      ]
+    },
+    {
+      date: "Май, 2019",
+      title: 'МАУ "АРТ"',
+      description: "Web-программист",
+      icon: "i-lucide-rocket",
+      skills: [
+        "JavaScript, Vue.js, (Vuex, Vue-router), Vuetify, React - программирование пользовательского интерфейса",
+        "PHP (Laravel, October CMS). - программирование бизнес логики",
+        "Работа с MySQL, PostgreSQL, MongoDB",
+        "Администрирование внутренней сети и сервера компании"
+      ]
+    }
+  ],
+  en: [
+    {
+      date: "November, 2023",
+      title: "Bellford LLC",
+      description: "Middle+ Frontend Developer",
+      skills: [
+        "Develop SPA/SSR platforms with Nuxt 3/4",
+        "Working with Python/Django APIs",
+        "Working with Nuxt.js architecture, FSD and microservice architecture",
+        "Development and maintenance of high-load CRM systems",
+        "Working with VueUse, Nuxt UI, PrimeVue, TailwindCSS and other popular libraries",
+        "TypeScript (Generics, Utility Types, API typing, component and props typing)",
+        "Vitest (unit testing of components)",
+        "Lighthouse optimization, request optimization and caching"
+      ],
+      icon: "i-lucide-check-circle"
+    },
+    {
+      date: "September, 2022",
+      title: "AWA.agency Studio",
+      icon: "i-lucide-check-circle",
+      description: "Middle Frontend Developer",
+      skills: [
+        "Building interfaces with Nuxt3 / Vue3",
+        "Data and form visualization using PrimeVue and Tailwind CSS",
+        "Development and maintenance of the client-side of web applications",
+        "Writing tests and fixing discovered bugs"
+      ]
+    },
+    {
+      date: "February, 2020",
+      title: "Avaks LLC",
+      description: "Junior Fullstack Developer",
+      icon: "i-lucide-check-circle",
+      skills: [
+        "Microservices on Node.js + Vue, integration with Laravel APIs",
+        "PHP (Laravel, October CMS) — business logic programming",
+        "Working with libraries for parsing Google Sheets and PDF documents",
+        "Working with CDEK API and Yandex.Maps",
+        "Bots for Telegram, VK"
+      ]
+    },
+    {
+      date: "May, 2019",
+      title: 'MAI "ART"',
+      description: "Web Developer",
+      icon: "i-lucide-rocket",
+      skills: [
+        "JavaScript, Vue.js (Vuex, Vue-router), Vuetify, React — user interface development",
+        "PHP (Laravel, October CMS) — business logic programming",
+        "Working with MySQL, PostgreSQL, MongoDB",
+        "Administration of the company's internal network and server"
+      ]
+    }
+  ]
+};
+const skills = {
+  ru: {
+    first: [
       {
-        date: "Ноябрь, 2023",
-        title: "ООО Беллфорд",
-        description: "Middle+ Frontend Developer",
-        skills: [
-          "Разработка SPA/SSR-платформ на Nuxt 3/4",
-          "Работа с Python/Django API",
-          "Работа с Nuxt.js архитектурой, FSD и микросервисной архитектурой",
-          "Разработка и поддержка высоконагруженных CRM систем",
-          "Работа с VueUse, Nuxt UI, PrimeVue, TailwindCSS и другими популярными библиотеками",
-          "TypeScript (Generics, Utility Types, типизация API, типизация компонентов и пропсов)",
-          "Vitest (модульное тестирование компонентов)",
-          "Lighthouse-оптимизация, оптимизация и кеширование запросов"
-        ],
-        icon: "i-lucide-check-circle"
+        name: "Vue.js",
+        description: "Прогрессивный JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов и одностраничных веб-приложений (SPA)",
+        icon: "i-simple-icons-vuedotjs",
+        to: "https://vuejs.org",
+        target: "_blank"
       },
       {
-        date: "Сентябрь, 2022",
-        title: "Студия AWA.agency",
-        icon: "i-lucide-check-circle",
-        description: "Middle Frontend Developer",
-        skills: [
-          "Разработка интерфейсов на Nuxt3 / Vue3",
-          "Визуализация данных и форм с PrimeVue и Tailwind CSS",
-          "Разработка и поддержка клиентской части веб-приложения",
-          "Написание тестов и исправление выявленных багов"
-        ]
+        name: "Nuxt.js",
+        description: "Бесплатный фреймворк с открытым исходным кодом на базе Vue.js, который упрощает создание современных, производительных и SEO-дружественных веб-приложений",
+        icon: "i-simple-icons-nuxt",
+        to: "https://nuxt.com",
+        target: "_blank"
       },
       {
-        date: "Февраль, 2020",
-        title: 'ООО "Авакс"',
-        description: "Junior Fullstack Developer",
-        icon: "i-lucide-check-circle",
-        skills: [
-          "Микросервисы на Node.js + Vue, интеграция с API Laravel",
-          "PHP (Laravel, October CMS). - программирование бизнес логики",
-          "Работа с библиотекамии парсинга Google-таблиц и PDF документов",
-          "Работа с API CDEK и Яндекс Карты",
-          "Боты для Telegram, VK"
-        ]
+        name: "Tailwind CSS",
+        description: "CSS-фреймворк, который позволяет быстро стилизовать веб-интерфейсы, применяя маленькие, готовые к использованию утилитарные классы прямо в HTML-разметке",
+        icon: "i-simple-icons-tailwindcss",
+        to: "https://tailwindcss.com",
+        target: "_blank"
       },
       {
-        date: "Май, 2019",
-        title: 'МАУ "АРТ"',
-        description: "Web-программист",
-        icon: "i-lucide-rocket",
-        skills: [
-          "JavaScript, Vue.js, (Vuex, Vue-router), Vuetify, React - программирование пользовательского интерфейса",
-          "PHP (Laravel, October CMS). - программирование бизнес логики",
-          "Работа с MySQL, PostgreSQL, MongoDB",
-          "Администрирование внутренней сети и сервера компании"
-        ]
+        name: "JavaScript",
+        description: "Универсальный язык программирования, который делает веб-страницы интерактивными, позволяя создавать динамический контент, анимации, игры и управлять элементами сайта",
+        icon: "i-simple-icons-javascript",
+        to: "https://learn.javascript.ru",
+        target: "_blank"
+      },
+      {
+        name: "TypeScript",
+        description: "Надмножество JavaScript, которое добавляет статическую типизацию и другие возможности для создания более надежных и масштабируемых веб-приложений",
+        icon: "i-simple-icons-typescript",
+        to: "https://www.typescriptlang.org",
+        target: "_blank"
+      },
+      {
+        name: "GitHub",
+        description: "Веб-платформа и хостинг для IT-проектов, основанная на системе контроля версий Git",
+        icon: "i-simple-icons-github",
+        to: "https://www.github.com",
+        target: "_blank"
+      },
+      {
+        name: "GitLab",
+        description: "Веб-приложение для управления репозиториями Git с функциями CI/CD, мониторинга и управления проектами",
+        icon: "i-simple-icons-gitlab",
+        to: "https://www.gitlab.com",
+        target: "_blank"
       }
     ],
-    skills: {
-      first: [
-        {
-          name: "Vue.js",
-          description: "Прогрессивный JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов и одностраничных веб-приложений (SPA)",
-          icon: "i-simple-icons-vuedotjs",
-          to: "https://vuejs.org",
-          target: "_blank"
-        },
-        {
-          name: "Nuxt.js",
-          description: "Бесплатный фреймворк с открытым исходным кодом на базе Vue.js, который упрощает создание современных, производительных и SEO-дружественных веб-приложений",
-          icon: "i-simple-icons-nuxt",
-          to: "https://nuxt.com",
-          target: "_blank"
-        },
-        {
-          name: "Tailwind CSS",
-          description: "CSS-фреймворк, который позволяет быстро стилизовать веб-интерфейсы, применяя маленькие, готовые к использованию утилитарные классы прямо в HTML-разметке",
-          icon: "i-simple-icons-tailwindcss",
-          to: "https://tailwindcss.com",
-          target: "_blank"
-        },
-        {
-          name: "JavaScript",
-          description: "Универсальный язык программирования, который делает веб-страницы интерактивными, позволяя создавать динамический контент, анимации, игры и управлять элементами сайта",
-          icon: "i-simple-icons-javascript",
-          to: "https://learn.javascript.ru",
-          target: "_blank"
-        },
-        {
-          name: "TypeScript",
-          description: "Надмножество JavaScript, которое добавляет статическую типизацию и другие возможности для создания более надежных и масштабируемых веб-приложений",
-          icon: "i-simple-icons-typescript",
-          to: "https://www.typescriptlang.org",
-          target: "_blank"
-        },
-        {
-          name: "GitHub",
-          description: "Веб-платформа и хостинг для IT-проектов, основанная на системе контроля версий Git",
-          icon: "i-simple-icons-github",
-          to: "https://www.github.com",
-          target: "_blank"
-        },
-        {
-          name: "GitLab",
-          description: "Веб-приложение для управления репозиториями Git с функциями CI/CD, мониторинга и управления проектами",
-          icon: "i-simple-icons-gitlab",
-          to: "https://www.gitlab.com",
-          target: "_blank"
-        }
-      ],
-      second: [
-        {
-          name: "VueUse",
-          description: "Богатая коллекция готовых к использованию вспомогательных функций (composable-функций, или useXyz), созданных для Vue.js Composition API",
-          icon: "i-simple-icons-vueuse",
-          to: "https://vueuse.org",
-          target: "_blank"
-        },
-        {
-          name: "Nuxt UI",
-          description: "Высокопроизводительная библиотека компонентов для фреймворка Nuxt.js, построенная на базе Vue 3 и Tailwind CSS",
-          icon: "i-simple-icons-nuxt",
-          to: "https://ui.nuxt.com",
-          target: "_blank"
-        },
-        {
-          name: "Chart.js",
-          description: "Бесплатная, с открытым исходным кодом библиотека JavaScript для создания интерактивных и адаптивных диаграмм и графиков в веб-приложениях",
-          icon: "i-simple-icons-chartdotjs",
-          to: "https://www.chartjs.org",
-          target: "_blank"
-        },
-        {
-          name: "Three.js",
-          description: "Бесплатная JavaScript-библиотека с открытым исходным кодом, которая упрощает создание и отображение анимированной 3D-графики прямо в браузере",
-          icon: "i-simple-icons-threedotjs",
-          to: "https://threejs.org",
-          target: "_blank"
-        },
-        {
-          name: "Node.js",
-          description: "Кроссплатформенная среда выполнения JavaScript, основанная на движке V8 от Chrome",
-          icon: "i-simple-icons-nodedotjs",
-          to: "https://nodejs.org",
-          target: "_blank"
-        },
-        {
-          name: "Strapi",
-          description: "Бесплатная, open-source headless CMS, написанная на Node.js, которая позволяет разработчикам создавать и управлять контентом",
-          icon: "i-simple-icons-strapi",
-          to: "https://strapi.io",
-          target: "_blank"
-        },
-        {
-          name: "PHP",
-          description: "Скриптовый язык программирования с открытым исходным кодом, который в основном используется для создания динамических веб-страниц и веб-приложений",
-          icon: "i-simple-icons-php",
-          to: "https://www.php.net",
-          target: "_blank"
-        }
-      ]
-    },
-    projects: [
+    second: [
       {
-        name: "Sharmed Books",
-        image: "",
-        quote: "Интерактивные книжки для детей",
-        description: "Проект по созданию интерактивных детских книжек с встроенным редактором и онлайн магазином",
-        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"],
-        slug: "charmed-books",
-        format: "png",
-        images: [1, 2, 3]
+        name: "VueUse",
+        description: "Богатая коллекция готовых к использованию вспомогательных функций (composable-функций, или useXyz), созданных для Vue.js Composition API",
+        icon: "i-simple-icons-vueuse",
+        to: "https://vueuse.org",
+        target: "_blank"
       },
       {
-        name: "DCLI",
-        image: "",
-        quote: "Центр лабораторных исследований",
-        description: "Проект по автоматизации и контролю лаболаторных исследований",
-        format: "jpg",
-        slug: "dcli",
-        images: [1, 2, 3, 4],
-        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS", "Chart.js"]
+        name: "Nuxt UI",
+        description: "Высокопроизводительная библиотека компонентов для фреймворка Nuxt.js, построенная на базе Vue 3 и Tailwind CSS",
+        icon: "i-simple-icons-nuxt",
+        to: "https://ui.nuxt.com",
+        target: "_blank"
       },
       {
-        name: "Kit Tracker",
-        image: "",
-        quote: "Отслеживание поставок анализа крови",
-        description: "Проект по отслеживанию и контролю полного пути следоваания анализов",
-        format: "jpg",
-        slug: "kit",
-        images: [1, 2],
-        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS", "Chart.js"]
+        name: "Chart.js",
+        description: "Бесплатная, с открытым исходным кодом библиотека JavaScript для создания интерактивных и адаптивных диаграмм и графиков в веб-приложениях",
+        icon: "i-simple-icons-chartdotjs",
+        to: "https://www.chartjs.org",
+        target: "_blank"
       },
       {
-        name: "Raimbek",
-        image: "",
-        quote: "Первый казахский молочный завод",
-        description: "Первый завод Казахстана по производству соков спиртоводочных изделий и молока",
-        stack: ["Vue.js", "Tailwind CSS", "Three.js"],
-        slug: "raimbek",
-        format: "jpg",
-        images: [1]
+        name: "Three.js",
+        description: "Бесплатная JavaScript-библиотека с открытым исходным кодом, которая упрощает создание и отображение анимированной 3D-графики прямо в браузере",
+        icon: "i-simple-icons-threedotjs",
+        to: "https://threejs.org",
+        target: "_blank"
       },
       {
-        name: "Portal",
-        image: "",
-        quote: "Интернет магазин книг по эзотерике",
-        description: "Портал по созданию и продаже книг и статей по эзотерике и духовным практикам",
-        slug: "portal",
-        format: "png",
-        images: [1],
-        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"]
+        name: "Node.js",
+        description: "Кроссплатформенная среда выполнения JavaScript, основанная на движке V8 от Chrome",
+        icon: "i-simple-icons-nodedotjs",
+        to: "https://nodejs.org",
+        target: "_blank"
       },
       {
-        name: "Русхимальянс",
-        image: "",
-        quote: "Газоперерабатывающий завод в России",
-        description: "Новый дизайн газоперерабатывающего завода",
-        slug: "rca",
-        format: "png",
-        images: [1, 2],
-        stack: ["BEM", "JavaScript", "Tailwind CSS"]
+        name: "Strapi",
+        description: "Бесплатная, open-source headless CMS, написанная на Node.js, которая позволяет разработчикам создавать и управлять контентом",
+        icon: "i-simple-icons-strapi",
+        to: "https://strapi.io",
+        target: "_blank"
+      },
+      {
+        name: "PHP",
+        description: "Скриптовый язык программирования с открытым исходным кодом, который в основном используется для создания динамических веб-страниц и веб-приложений",
+        icon: "i-simple-icons-php",
+        to: "https://www.php.net",
+        target: "_blank"
       }
     ]
   },
   en: {
-    sidebar: {
-      links: [
-        [
-          {
-            label: "Index",
-            to: "/en/",
-            icon: "i-lucide-home"
-          },
-          {
-            label: "Work Experience",
-            to: "/en/jobs",
-            icon: "i-lucide-rocket"
-          },
-          {
-            label: "Skills",
-            to: "/en/skills",
-            icon: "i-lucide-code"
-          },
-          {
-            label: "Projects",
-            to: "/en/projects",
-            icon: "i-lucide-folder-open"
-          },
-          {
-            label: "About Me",
-            to: "/en/about",
-            icon: "i-lucide-user"
-          }
-        ]
-      ]
-    },
-    jobs: [
+    first: [
       {
-        date: "November, 2023",
-        title: "Bellford LLC",
-        description: "Middle+ Frontend Developer",
-        skills: [
-          "Develop SPA/SSR platforms with Nuxt 3/4",
-          "Working with Python/Django APIs",
-          "Working with Nuxt.js architecture, FSD and microservice architecture",
-          "Development and maintenance of high-load CRM systems",
-          "Working with VueUse, Nuxt UI, PrimeVue, TailwindCSS and other popular libraries",
-          "TypeScript (Generics, Utility Types, API typing, component and props typing)",
-          "Vitest (unit testing of components)",
-          "Lighthouse optimization, request optimization and caching"
-        ],
-        icon: "i-lucide-check-circle"
+        name: "Vue.js",
+        description: "Progressive, open-source JavaScript framework for building user interfaces and single-page applications (SPA).",
+        icon: "i-simple-icons-vuedotjs",
+        to: "https://vuejs.org",
+        target: "_blank"
       },
       {
-        date: "September, 2022",
-        title: "AWA.agency Studio",
-        icon: "i-lucide-check-circle",
-        description: "Middle Frontend Developer",
-        skills: [
-          "Building interfaces with Nuxt3 / Vue3",
-          "Data and form visualization using PrimeVue and Tailwind CSS",
-          "Development and maintenance of the client-side of web applications",
-          "Writing tests and fixing discovered bugs"
-        ]
+        name: "Nuxt.js",
+        description: "Open-source framework based on Vue.js that simplifies creating modern, high-performance, and SEO-friendly web applications.",
+        icon: "i-simple-icons-nuxt",
+        to: "https://nuxt.com",
+        target: "_blank"
       },
       {
-        date: "February, 2020",
-        title: "Avaks LLC",
-        description: "Junior Fullstack Developer",
-        icon: "i-lucide-check-circle",
-        skills: [
-          "Microservices on Node.js + Vue, integration with Laravel APIs",
-          "PHP (Laravel, October CMS) — business logic programming",
-          "Working with libraries for parsing Google Sheets and PDF documents",
-          "Working with CDEK API and Yandex.Maps",
-          "Bots for Telegram, VK"
-        ]
+        name: "Tailwind CSS",
+        description: "A utility-first CSS framework that enables rapid interface styling using small, reusable classes directly in HTML markup.",
+        icon: "i-simple-icons-tailwindcss",
+        to: "https://tailwindcss.com",
+        target: "_blank"
       },
       {
-        date: "May, 2019",
-        title: 'MAI "ART"',
-        description: "Web Developer",
-        icon: "i-lucide-rocket",
-        skills: [
-          "JavaScript, Vue.js (Vuex, Vue-router), Vuetify, React — user interface development",
-          "PHP (Laravel, October CMS) — business logic programming",
-          "Working with MySQL, PostgreSQL, MongoDB",
-          "Administration of the company's internal network and server"
-        ]
+        name: "JavaScript",
+        description: "A versatile programming language that makes web pages interactive, allowing creation of dynamic content, animations, games, and DOM manipulation.",
+        icon: "i-simple-icons-javascript",
+        to: "https://learn.javascript.ru",
+        target: "_blank"
+      },
+      {
+        name: "TypeScript",
+        description: "A superset of JavaScript that adds static typing and other features for building more reliable and scalable web applications.",
+        icon: "i-simple-icons-typescript",
+        to: "https://www.typescriptlang.org",
+        target: "_blank"
+      },
+      {
+        name: "GitHub",
+        description: "Web platform and hosting for software projects based on the Git version control system.",
+        icon: "i-simple-icons-github",
+        to: "https://www.github.com",
+        target: "_blank"
+      },
+      {
+        name: "GitLab",
+        description: "A web application for managing Git repositories with CI/CD, monitoring, and project management features.",
+        icon: "i-simple-icons-gitlab",
+        to: "https://www.gitlab.com",
+        target: "_blank"
       }
     ],
-    skills: {
-      first: [
-        {
-          name: "Vue.js",
-          description: "Progressive, open-source JavaScript framework for building user interfaces and single-page applications (SPA).",
-          icon: "i-simple-icons-vuedotjs",
-          to: "https://vuejs.org",
-          target: "_blank"
-        },
-        {
-          name: "Nuxt.js",
-          description: "Open-source framework based on Vue.js that simplifies creating modern, high-performance, and SEO-friendly web applications.",
-          icon: "i-simple-icons-nuxt",
-          to: "https://nuxt.com",
-          target: "_blank"
-        },
-        {
-          name: "Tailwind CSS",
-          description: "A utility-first CSS framework that enables rapid interface styling using small, reusable classes directly in HTML markup.",
-          icon: "i-simple-icons-tailwindcss",
-          to: "https://tailwindcss.com",
-          target: "_blank"
-        },
-        {
-          name: "JavaScript",
-          description: "A versatile programming language that makes web pages interactive, allowing creation of dynamic content, animations, games, and DOM manipulation.",
-          icon: "i-simple-icons-javascript",
-          to: "https://learn.javascript.ru",
-          target: "_blank"
-        },
-        {
-          name: "TypeScript",
-          description: "A superset of JavaScript that adds static typing and other features for building more reliable and scalable web applications.",
-          icon: "i-simple-icons-typescript",
-          to: "https://www.typescriptlang.org",
-          target: "_blank"
-        },
-        {
-          name: "GitHub",
-          description: "Web platform and hosting for software projects based on the Git version control system.",
-          icon: "i-simple-icons-github",
-          to: "https://www.github.com",
-          target: "_blank"
-        },
-        {
-          name: "GitLab",
-          description: "A web application for managing Git repositories with CI/CD, monitoring, and project management features.",
-          icon: "i-simple-icons-gitlab",
-          to: "https://www.gitlab.com",
-          target: "_blank"
-        }
-      ],
-      second: [
-        {
-          name: "VueUse",
-          description: "A rich collection of ready-to-use utility functions (composables, e.g. useXyz) created for the Vue.js Composition API.",
-          icon: "i-simple-icons-vueuse",
-          to: "https://vueuse.org",
-          target: "_blank"
-        },
-        {
-          name: "Nuxt UI",
-          description: "High-performance component library for the Nuxt.js framework, built on Vue 3 and Tailwind CSS.",
-          icon: "i-simple-icons-nuxt",
-          to: "https://ui.nuxt.com",
-          target: "_blank"
-        },
-        {
-          name: "Chart.js",
-          description: "Free, open-source JavaScript library for creating interactive and responsive charts and graphs in web applications.",
-          icon: "i-simple-icons-chartdotjs",
-          to: "https://www.chartjs.org",
-          target: "_blank"
-        },
-        {
-          name: "Three.js",
-          description: "Open-source JavaScript library that simplifies creating and rendering animated 3D graphics directly in the browser.",
-          icon: "i-simple-icons-threedotjs",
-          to: "https://threejs.org",
-          target: "_blank"
-        },
-        {
-          name: "Node.js",
-          description: "Cross-platform JavaScript runtime built on Chrome's V8 engine.",
-          icon: "i-simple-icons-nodedotjs",
-          to: "https://nodejs.org",
-          target: "_blank"
-        },
-        {
-          name: "Strapi",
-          description: "Free, open-source headless CMS written in Node.js that enables developers to create and manage content.",
-          icon: "i-simple-icons-strapi",
-          to: "https://strapi.io",
-          target: "_blank"
-        },
-        {
-          name: "PHP",
-          description: "Open-source scripting language mainly used for building dynamic web pages and web applications.",
-          icon: "i-simple-icons-php",
-          to: "https://www.php.net",
-          target: "_blank"
-        }
-      ]
-    },
-    projects: [
+    second: [
       {
-        name: "Sharmed Books",
-        image: "",
-        quote: "Interactive books for children",
-        description: "A project to create interactive children's books with a built-in editor and an online store",
-        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"],
-        slug: "charmed-books",
-        format: "png",
-        images: [1, 2, 3]
+        name: "VueUse",
+        description: "A rich collection of ready-to-use utility functions (composables, e.g. useXyz) created for the Vue.js Composition API.",
+        icon: "i-simple-icons-vueuse",
+        to: "https://vueuse.org",
+        target: "_blank"
       },
       {
-        name: "DCLI",
-        image: "",
-        quote: "Laboratory Research Center",
-        description: "A project for automating and managing laboratory research",
-        format: "jpg",
-        slug: "dcli",
-        images: [1, 2, 3, 4],
-        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS", "Chart.js"]
+        name: "Nuxt UI",
+        description: "High-performance component library for the Nuxt.js framework, built on Vue 3 and Tailwind CSS.",
+        icon: "i-simple-icons-nuxt",
+        to: "https://ui.nuxt.com",
+        target: "_blank"
       },
       {
-        name: "Kit Tracker",
-        image: "",
-        quote: "Blood test kit tracking",
-        description: "A project for tracking and managing the full lifecycle of blood test samples",
-        format: "jpg",
-        slug: "kit",
-        images: [1, 2],
-        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS", "Chart.js"]
+        name: "Chart.js",
+        description: "Free, open-source JavaScript library for creating interactive and responsive charts and graphs in web applications.",
+        icon: "i-simple-icons-chartdotjs",
+        to: "https://www.chartjs.org",
+        target: "_blank"
       },
       {
-        name: "Raimbek",
-        image: "",
-        quote: "The first Kazakh dairy plant",
-        description: "The first plant in Kazakhstan for the production of juices, alcoholic beverages, and dairy products",
-        stack: ["Vue.js", "Tailwind CSS", "Three.js"],
-        slug: "raimbek",
-        format: "jpg",
-        images: [1]
+        name: "Three.js",
+        description: "Open-source JavaScript library that simplifies creating and rendering animated 3D graphics directly in the browser.",
+        icon: "i-simple-icons-threedotjs",
+        to: "https://threejs.org",
+        target: "_blank"
       },
       {
-        name: "Portal",
-        image: "",
-        quote: "Online store for esoteric books",
-        description: "A portal for creating and selling books and articles on esotericism and spiritual practices",
-        slug: "portal",
-        format: "png",
-        images: [1],
-        stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"]
+        name: "Node.js",
+        description: "Cross-platform JavaScript runtime built on Chrome's V8 engine.",
+        icon: "i-simple-icons-nodedotjs",
+        to: "https://nodejs.org",
+        target: "_blank"
       },
       {
-        name: "Ruskhimalyans",
-        image: "",
-        quote: "Gas processing plant in Russia",
-        description: "A new design for a gas processing plant",
-        slug: "rca",
-        format: "png",
-        images: [1, 2],
-        stack: ["BEM", "JavaScript", "Tailwind CSS"]
+        name: "Strapi",
+        description: "Free, open-source headless CMS written in Node.js that enables developers to create and manage content.",
+        icon: "i-simple-icons-strapi",
+        to: "https://strapi.io",
+        target: "_blank"
+      },
+      {
+        name: "PHP",
+        description: "Open-source scripting language mainly used for building dynamic web pages and web applications.",
+        icon: "i-simple-icons-php",
+        to: "https://www.php.net",
+        target: "_blank"
       }
     ]
+  }
+};
+const projects = {
+  ru: [
+    {
+      name: "Такси Экспресс",
+      image: "",
+      quote: "Междугороднее такси (Респеблика Башкортостан)",
+      description: "Lending Page для междугороднего такси предоставляющего перевозки по Башкирии",
+      stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"],
+      slug: "express",
+      format: "png",
+      images: [1]
+    },
+    {
+      name: "Sharmed Books",
+      image: "",
+      quote: "Интерактивные книжки для детей",
+      description: "Проект по созданию интерактивных детских книжек с встроенным редактором и онлайн магазином",
+      stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"],
+      slug: "charmed-books",
+      format: "png",
+      images: [1, 2, 3]
+    },
+    {
+      name: "DCLI",
+      image: "",
+      quote: "Центр лабораторных исследований",
+      description: "Проект по автоматизации и контролю лаболаторных исследований",
+      format: "jpg",
+      slug: "dcli",
+      images: [1, 2, 3, 4],
+      stack: ["Vue.js", "Nuxt.js", "Tailwind CSS", "Chart.js"]
+    },
+    {
+      name: "Kit Tracker",
+      image: "",
+      quote: "Отслеживание поставок анализа крови",
+      description: "Проект по отслеживанию и контролю полного пути следоваания анализов",
+      format: "jpg",
+      slug: "kit",
+      images: [1, 2],
+      stack: ["Vue.js", "Nuxt.js", "Tailwind CSS", "Chart.js"]
+    },
+    {
+      name: "Raimbek",
+      image: "",
+      quote: "Первый казахский молочный завод",
+      description: "Первый завод Казахстана по производству соков спиртоводочных изделий и молока",
+      stack: ["Vue.js", "Tailwind CSS", "Three.js"],
+      slug: "raimbek",
+      format: "jpg",
+      images: [1]
+    },
+    {
+      name: "Portal",
+      image: "",
+      quote: "Интернет магазин книг по эзотерике",
+      description: "Портал по созданию и продаже книг и статей по эзотерике и духовным практикам",
+      slug: "portal",
+      format: "png",
+      images: [1],
+      stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"]
+    },
+    {
+      name: "Русхимальянс",
+      image: "",
+      quote: "Газоперерабатывающий завод в России",
+      description: "Новый дизайн газоперерабатывающего завода",
+      slug: "rca",
+      format: "png",
+      images: [1, 2],
+      stack: ["BEM", "JavaScript", "Tailwind CSS"]
+    }
+  ],
+  en: [
+    {
+      name: "Taxi Express",
+      image: "",
+      quote: "Intercity taxi (Republic of Bashkortostan)",
+      description: "Landing page for an intercity taxi service providing transportation across Bashkortostan",
+      stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"],
+      slug: "express",
+      format: "png",
+      images: [1]
+    },
+    {
+      name: "Sharmed Books",
+      image: "",
+      quote: "Interactive books for children",
+      description: "A project to create interactive children's books with a built-in editor and an online store",
+      stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"],
+      slug: "charmed-books",
+      format: "png",
+      images: [1, 2, 3]
+    },
+    {
+      name: "DCLI",
+      image: "",
+      quote: "Laboratory Research Center",
+      description: "A project for automating and managing laboratory research",
+      format: "jpg",
+      slug: "dcli",
+      images: [1, 2, 3, 4],
+      stack: ["Vue.js", "Nuxt.js", "Tailwind CSS", "Chart.js"]
+    },
+    {
+      name: "Kit Tracker",
+      image: "",
+      quote: "Blood test kit tracking",
+      description: "A project for tracking and managing the full lifecycle of blood test samples",
+      format: "jpg",
+      slug: "kit",
+      images: [1, 2],
+      stack: ["Vue.js", "Nuxt.js", "Tailwind CSS", "Chart.js"]
+    },
+    {
+      name: "Raimbek",
+      image: "",
+      quote: "The first Kazakh dairy plant",
+      description: "The first plant in Kazakhstan for the production of juices, alcoholic beverages, and dairy products",
+      stack: ["Vue.js", "Tailwind CSS", "Three.js"],
+      slug: "raimbek",
+      format: "jpg",
+      images: [1]
+    },
+    {
+      name: "Portal",
+      image: "",
+      quote: "Online store for esoteric books",
+      description: "A portal for creating and selling books and articles on esotericism and spiritual practices",
+      slug: "portal",
+      format: "png",
+      images: [1],
+      stack: ["Vue.js", "Nuxt.js", "Tailwind CSS"]
+    },
+    {
+      name: "Ruskhimalyans",
+      image: "",
+      quote: "Gas processing plant in Russia",
+      description: "A new design for a gas processing plant",
+      slug: "rca",
+      format: "png",
+      images: [1, 2],
+      stack: ["BEM", "JavaScript", "Tailwind CSS"]
+    }
+  ]
+};
+const links = {
+  ru: [
+    [
+      {
+        label: "Главная",
+        to: "/",
+        icon: "i-lucide-home"
+      },
+      {
+        label: "Опыт работы",
+        to: "/jobs",
+        icon: "i-lucide-rocket"
+      },
+      {
+        label: "Навыки",
+        to: "/skills",
+        icon: "i-lucide-code"
+      },
+      {
+        label: "Проекты",
+        to: "/projects",
+        icon: "i-lucide-folder-open"
+      },
+      {
+        label: "Биография",
+        to: "/about",
+        icon: "i-lucide-user"
+      }
+    ]
+  ],
+  en: [
+    [
+      {
+        label: "Index",
+        to: "/en/",
+        icon: "i-lucide-home"
+      },
+      {
+        label: "Work Experience",
+        to: "/en/jobs",
+        icon: "i-lucide-rocket"
+      },
+      {
+        label: "Skills",
+        to: "/en/skills",
+        icon: "i-lucide-code"
+      },
+      {
+        label: "Projects",
+        to: "/en/projects",
+        icon: "i-lucide-folder-open"
+      },
+      {
+        label: "About Me",
+        to: "/en/about",
+        icon: "i-lucide-user"
+      }
+    ]
+  ]
+};
+const appConfig$1 = defineAppConfig({
+  global: {
+    email: "emax.mails@gmail.com",
+    telegram: "https://t.me/max_magixe",
+    github: "https://github.com/emagixe",
+    resume: {
+      ru: "https://hh.ru/resume_converter/%D0%95%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%20%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87.pdf?hash=55584c38ff0768026f0039ed1f70326b666538&type=pdf&hhtmFrom=&hhtmSource=resume",
+      en: "https://hh.ru/resume_converter/%D0%95%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%20%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87.pdf?hash=55584c38ff0768026f0039ed1f70326b666538&type=pdf&hhtmFrom=&hhtmSource=resume"
+    },
+    available: true
+  },
+  ru: {
+    sidebar: {
+      links: links.ru
+    },
+    jobs: jobs.ru,
+    skills: skills.ru,
+    projects: projects.ru
+  },
+  en: {
+    sidebar: {
+      links: links.en
+    },
+    jobs: jobs.en,
+    skills: skills.en,
+    projects: projects.en
   },
   footer: {
     credits: `Magixe © ${(/* @__PURE__ */ new Date()).getFullYear()}`
@@ -2130,7 +2171,7 @@ const inlineConfig = {
     "fetchTimeout": 1500
   }
 };
-const appConfig = /* @__PURE__ */ defuFn(cfg0, inlineConfig);
+const appConfig = /* @__PURE__ */ defuFn(appConfig$1, inlineConfig);
 function useAppConfig() {
   const nuxtApp = useNuxtApp();
   nuxtApp._appConfig ||= klona(appConfig);
@@ -2300,7 +2341,7 @@ function createNuxtI18nContext(nuxt, vueI18n, defaultLocale) {
       return;
     }
     const headers = getLocaleConfig(locale)?.cacheable ? {} : { "Cache-Control": "no-cache" };
-    const messages = await $fetch(`${"/_i18n/CbLmCaHn"}/${locale}/messages.json`, { headers });
+    const messages = await $fetch(`${"/_i18n/rHv-4ujZ"}/${locale}/messages.json`, { headers });
     for (const k of Object.keys(messages)) {
       i18n.mergeLocaleMessage(k, messages[k]);
     }
@@ -6558,7 +6599,7 @@ const i18n_EI7LsD1KYQADczz5hrChviGQCdVM8yUkvFEZLJpmnvM = /* @__PURE__ */ defineN
     {
       localeConfigs.value = useRequestEvent().context.nuxtI18n?.localeConfigs || {};
     }
-    prerenderRoutes(localeCodes.map((locale) => `${"/_i18n/CbLmCaHn"}/${locale}/messages.json`));
+    prerenderRoutes(localeCodes.map((locale) => `${"/_i18n/rHv-4ujZ"}/${locale}/messages.json`));
     const i18n = createI18n(optionsI18n);
     const detectors = useDetectors(useRequestEvent(nuxt), useI18nDetection(nuxt), nuxt);
     const ctx = createNuxtI18nContext(nuxt, i18n, optionsI18n.defaultLocale);
@@ -6732,7 +6773,7 @@ const plugins = [
   ssg_detect_IpHCGcQQ_IR5Rl99qyukWoMA9fJGfuTYyoksTzy81cs
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import('./default-DBXSQvw5.mjs').then((m) => m.default || m))
+  default: defineAsyncComponent(() => import('./default-BDwtEFGn.mjs').then((m) => m.default || m))
 };
 const LayoutLoader = defineComponent({
   name: "LayoutLoader",
@@ -6999,7 +7040,7 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-C4TlAg3S.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-M3T3gAa8.mjs'));
     const _Error = defineAsyncComponent(() => import('./error-500-CYIAFFP6.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
@@ -7081,5 +7122,5 @@ let entry;
 }
 const entry_default = (ssrContext) => entry(ssrContext);
 
-export { _export_sfc as _, useAppConfig as a, useI18n as b, useSeoMeta as c, useRoute as d, entry_default as default, useState as e, __nuxt_component_3 as f, appConfig as g, useNuxtApp as h, useRuntimeConfig as i, useRequestEvent as j, useRouter as k, nuxtLinkDefaults as l, asyncDataDefaults as m, navigateTo as n, createError as o, resolveRouteObject as r, useHead as u };
+export { _export_sfc as _, useAppConfig as a, useI18n as b, useSeoMeta as c, useRoute as d, entry_default as default, appConfig$1 as e, useState as f, __nuxt_component_3 as g, appConfig as h, useNuxtApp as i, useRuntimeConfig as j, useRequestEvent as k, useRouter as l, nuxtLinkDefaults as m, navigateTo as n, asyncDataDefaults as o, createError as p, resolveRouteObject as r, useHead as u };
 //# sourceMappingURL=server.mjs.map
