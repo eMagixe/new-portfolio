@@ -77,11 +77,9 @@ useSeoMeta({
 		</div>
 
 		<UCarousel v-slot="{ item }" class-names :arrows="images.length > 1" :items="images" class="mx-auto w-full mb-5">
-			<NuxtImg
-				:alt="currentProjectSlug"
+			<img
+				:alt="currentProjectSlug+ useId()"
 				:src="item"
-				preload
-				:placeholder="['auto']"
 				loading="lazy"
 				class="mx-auto w-full object-cover"
 			/>
