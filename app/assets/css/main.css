@@ -37,7 +37,7 @@ h3 {
 
 .photo {
     img {
-        --a: 2deg; /* угол поворота (чем меньше, тем лучше) */
+        --a: 2deg;
         width: 250px;
         aspect-ratio: 1;
         border-radius: 50%;
@@ -65,6 +65,6 @@ h3 {
 
 body, header {
     background:
-            linear-gradient(110deg, rgba(144, 161, 185, .3) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 75%,  rgba(144, 161, 185, .3) 100%);
+            linear-gradient(110deg, rgba(144, 161, 185, .5) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 75%,  rgba(144, 161, 185, .5) 100%);
     background-size: contain;
 }

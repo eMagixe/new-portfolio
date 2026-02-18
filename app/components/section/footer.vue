@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui'
+import appConfig from '~/app.config'
 
 const items: NavigationMenuItem[] = []
 
@@ -14,7 +15,7 @@ const visible = computed(() => {
 <template>
 	<UFooter v-if="visible" class="border border-t-gray-200 border-b-0 border-x-0">
 		<template #left>
-			<p class="text-muted text-sm">Max Evchenko © {{ new Date().getFullYear() }}</p>
+			<p class="text-muted text-sm">{{ appConfig.footer.credits }}</p>
 		</template>
 
 		<UNavigationMenu :items="items" variant="link" />

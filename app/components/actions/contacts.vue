@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import appConfig from '~/app.config'
+
 const { locale } = useI18n()
 </script>
 
@@ -7,7 +9,7 @@ const { locale } = useI18n()
 		icon="i-simple-icons-telegram"
 		color="neutral"
 		variant="ghost"
-		to="https://t.me/max_magixe"
+		:to="appConfig.global.telegram"
 		target="_blank"
 		aria-label="Telegram"
 	/>
@@ -15,7 +17,7 @@ const { locale } = useI18n()
 		icon="i-simple-icons-gmail"
 		color="neutral"
 		variant="ghost"
-		to="mailto:emax.mails@gmail.com"
+		:to="`mailto:${appConfig.global.email}?subject=Hello, from your site}`"
 		target="_blank"
 		aria-label="X"
 	/>
@@ -23,7 +25,7 @@ const { locale } = useI18n()
 		icon="i-simple-icons-github"
 		color="neutral"
 		variant="ghost"
-		to="https://github.com/emagixe"
+		:to="appConfig.global.github"
 		target="_blank"
 		aria-label="GitHub"
 	/>
@@ -32,7 +34,7 @@ const { locale } = useI18n()
 		icon="i-lucide-download"
 		color="neutral"
 		variant="ghost"
-		to="https://hh.ru/resume_converter/%D0%95%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%20%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87.pdf?hash=55584c38ff0768026f0039ed1f70326b666538&type=pdf&hhtmFrom=&hhtmSource=resume"
+		:to="appConfig.global.resume.ru"
 		target="_blank"
 		aria-label="Download PDF"
 	/>
@@ -41,7 +43,7 @@ const { locale } = useI18n()
 		icon="i-lucide-download"
 		color="neutral"
 		variant="ghost"
-		to="https://hh.ru/resume_converter/%D0%95%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%20%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87.pdf?hash=55584c38ff0768026f0039ed1f70326b666538&type=pdf&hhtmFrom=&hhtmSource=resume"
+		:to="appConfig.global.resume.en"
 		target="_blank"
 		aria-label="Download PDF"
 	/>
