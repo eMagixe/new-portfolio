@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 	icon: {
 		serverBundle: 'local'
 	},
-	devtools: { enabled: false },
+	devtools: { enabled: true },
 	app: {
 		head: {
 			htmlAttrs: {

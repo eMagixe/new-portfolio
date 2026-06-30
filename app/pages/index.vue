@@ -35,7 +35,7 @@ useSeoMeta({
 		<div class="flex flex-col justify-center items-center mt-10 photo">
 			<NuxtImg
 				alt="photo"
-				src="/images/photo.jpg"
+				src="/images/photo.png"
 				preload
 				:placeholder="['auto']"
 				loading="lazy"

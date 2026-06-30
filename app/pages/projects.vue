@@ -12,21 +12,39 @@ type Project = {
 	images?: number[]
 }
 
+const currentProjectSlug = ref<string>('charmed-books')
+const selectedProject = ref<Project | undefined>()
+
 const projects = computed(() => {
 	return (locale.value === 'ru' ? useAppConfig().ru.projects : useAppConfig().en.projects) as Project[]
 })
 
-const currentProjectSlug = ref<string | undefined>('charmed-books')
-const selectedProject = ref(projects.value[0])
+selectedProject.value = projects.value[0]
 
-const images = computed(() => {
-	selectedProject.value = projects.value.find((i) => i.slug === currentProjectSlug.value)
-	return (
-		selectedProject.value?.images?.map(
-			(i) => `/images/projects/${currentProjectSlug.value}/${i}.${selectedProject.value?.format}`
-		) || []
-	)
-})
+const makeImageUrl = (project: Project, numberImage: number) => {
+	return `/images/projects/${project.slug}/${numberImage}.${project?.format}`
+}
+
+const findProjectBySlug = (items: Ref, slug: Ref<string>) => {
+	return items.value?.find((i: Project) => i.slug === slug.value)
+}
+
+const getImagesProject = (project: Ref) => {
+	return project.value?.images?.map((numberImage: number) => {
+		return makeImageUrl(project.value, numberImage)
+	})
+}
+
+const getImages = (project: Ref, allProjects: Ref, slug: Ref<string>) => {
+	if (allProjects.value.length > 0) {
+		project.value = findProjectBySlug(allProjects, slug)
+		return getImagesProject(project)
+	} else {
+		return []
+	}
+}
+
+const images = computed(() => getImages(selectedProject, projects, currentProjectSlug))
 
 useSeoMeta({
 	title: t('projects.seo.title'),
@@ -54,7 +72,7 @@ useSeoMeta({
 					description: 'line-clamp-3'
 				}"
 				class="w-64 h-42 shrink-0 cursor-pointer"
-				@click="currentProjectSlug = project.slug"
+				@click="currentProjectSlug = project.slug ? project.slug : 'charmed-books'"
 			>
 				<template #header>
 					<h3 class="font-semibold">{{ project.name }}</h3>
@@ -75,16 +93,14 @@ useSeoMeta({
 		<div class="w-full bg-neutral-100 px-4 py-2 my-5">
 			{{ selectedProject?.name }} - {{ selectedProject?.description }}
 		</div>
-
-		<UCarousel v-slot="{ item }" class-names :arrows="images.length > 1" :items="images" class="mx-auto w-full mb-5">
+		<UCarousel v-slot="{ item }" class-names :arrows="images && images.length > 1" :items="images" class="mx-auto w-full mb-5">
 			<img
-				:alt="currentProjectSlug+ useId()"
-				:src="item"
+				:alt="currentProjectSlug + useId()"
+				:src="item as string"
 				loading="lazy"
 				class="mx-auto w-full object-cover"
 			/>
 		</UCarousel>
-
 		<ActionsNavigation page="projects" class="mt-10" />
 	</UContainer>
 </template>
