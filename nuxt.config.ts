@@ -26,7 +26,7 @@ export default defineNuxtConfig({
 		}
 	},
 	ui: {
-		colorMode: true,
+		colorMode: false,
 		experimental: {
 			componentDetection: true
 		}
