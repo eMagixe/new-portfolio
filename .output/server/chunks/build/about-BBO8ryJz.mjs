@@ -38,7 +38,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_NuxtLink = __nuxt_component_1;
   _push(`<div${ssrRenderAttrs(mergeProps({
     id: "about",
-    class: "bg-primary/60 not-sm:py-10 sm:py-20 min-h-screen bg-about"
+    class: "bg-primary/60 border border-primary/60 not-sm:py-10 sm:py-20 min-h-screen bg-about"
   }, _attrs))}>`);
   _push(ssrRenderComponent(_component_UContainer, null, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -124,4 +124,4 @@ _sfc_main.setup = (props, ctx) => {
 const about = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionAbout" });
 
 export { about as default };
-//# sourceMappingURL=about-i4ehqUbE.mjs.map
+//# sourceMappingURL=about-BBO8ryJz.mjs.map

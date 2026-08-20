@@ -41,7 +41,7 @@ const icons = [
 		<div>
 			<div class="flex flex-col justify-center items-center text-center py-10 space-y-6">
 				<h1 class="text-3xl font-bold text-primary!">{{ $t('index.name') }}</h1>
-				<p class="not-sm:text-sm sm:text-2xl not-sm:w-4/5 not-md:text-lg md:text-2xl not-md:w-4/5 md:w-1/2 m-5">
+				<p class="text-[clamp(1rem,1vw+0.3rem,1.2rem)] not-md:w-4/5 md:w-1/2 m-5">
 					{{ $t('index.description') }}
 				</p>
 				<div class="flex flex-wrap gap-4 justify-center mt-5">

@@ -196,7 +196,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
         class: "mx-auto rounded-[50%] object-cover",
         onClick: ($event) => ("navigateTo" in _ctx ? _ctx.navigateTo : unref(navigateTo))("#about")
       }, null, _parent));
-      _push(`</div><div><div class="flex flex-col justify-center items-center text-center py-10 space-y-6"><h1 class="text-3xl font-bold text-primary!">${ssrInterpolate(_ctx.$t("index.name"))}</h1><p class="not-sm:text-sm sm:text-2xl not-sm:w-4/5 not-md:text-lg md:text-2xl not-md:w-4/5 md:w-1/2 m-5">${ssrInterpolate(_ctx.$t("index.description"))}</p><div class="flex flex-wrap gap-4 justify-center mt-5"><!--[-->`);
+      _push(`</div><div><div class="flex flex-col justify-center items-center text-center py-10 space-y-6"><h1 class="text-3xl font-bold text-primary!">${ssrInterpolate(_ctx.$t("index.name"))}</h1><p class="text-[clamp(1rem,1vw+0.3rem,1.2rem)] not-md:w-4/5 md:w-1/2 m-5">${ssrInterpolate(_ctx.$t("index.description"))}</p><div class="flex flex-wrap gap-4 justify-center mt-5"><!--[-->`);
       ssrRenderList(unref(links), (link) => {
         _push(ssrRenderComponent(_component_AnimatedButton, {
           key: link.label,
@@ -305,10 +305,10 @@ const createLazyVisibleComponent = defineLazyComponent(
   },
   (props) => hydrateOnVisible(props.hydrateOnVisible === true ? void 0 : props.hydrateOnVisible)
 );
-const __nuxt_component_1_lazy_visible = createLazyVisibleComponent("components/section/about.vue", () => import('./about-i4ehqUbE.mjs').then((c) => c.default || c));
+const __nuxt_component_1_lazy_visible = createLazyVisibleComponent("components/section/about.vue", () => import('./about-BBO8ryJz.mjs').then((c) => c.default || c));
 const __nuxt_component_2_lazy_visible = createLazyVisibleComponent("components/section/jobs.vue", () => import('./jobs-Cd9x8iVL.mjs').then((c) => c.default || c));
 const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/skills.vue", () => import('./skills-DKcJvsxA.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy_visible = createLazyVisibleComponent("components/section/projects.vue", () => import('./projects-CFCag4fM.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy_visible = createLazyVisibleComponent("components/section/projects.vue", () => import('./projects-BrnECSFI.mjs').then((c) => c.default || c));
 const _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_SectionWelcome = __nuxt_component_0;
@@ -337,4 +337,4 @@ const index$1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePrope
 }, Symbol.toStringTag, { value: "Module" }));
 
 export { _sfc_main$2 as _, index$1 as i };
-//# sourceMappingURL=index-B3opexC5.mjs.map
+//# sourceMappingURL=index-7seO3MxZ.mjs.map
