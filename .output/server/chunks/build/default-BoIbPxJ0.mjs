@@ -7685,7 +7685,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_SectionFooter = __nuxt_component_5;
   _push(`<!--[-->`);
   _push(ssrRenderComponent(_component_ActionsTop, null, null, _parent));
-  _push(ssrRenderComponent(_component_UMain, null, {
+  _push(ssrRenderComponent(_component_UMain, { id: "welcome" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
         _push2(ssrRenderComponent(_component_UApp, { tooltip: { delayDuration: 300 } }, {
@@ -7727,4 +7727,4 @@ _sfc_main.setup = (props, ctx) => {
 const _default = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { _default as default };
-//# sourceMappingURL=default-BAi4TaIN.mjs.map
+//# sourceMappingURL=default-BoIbPxJ0.mjs.map
