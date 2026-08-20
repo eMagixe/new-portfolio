@@ -3,9 +3,24 @@
 @import "@nuxt/ui";
 
 * {
-    color: #585b84;
+    color: #EAF2FF;
     font-family: "Roboto", sans-serif;
 }
+
+.before-after {
+    box-shadow: 0 0 25px var(--ui-background);
+    border-radius: 10px;
+    border: 1px solid var(--ui-background);
+}
+
+.before-after:before {
+    background-image: linear-gradient(90deg, var(--ui-background) 0%, var(--ui-background) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.before-after:after {
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--ui-background) 50%, var(--ui-background) 100%);
+}
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
@@ -15,56 +30,105 @@ h1 {
     font-size: 2rem;
     font-weight: 500;
 }
+
 h2 {
     font-size: 1.75rem;
     font-weight: 500;
 }
+
 h3 {
     font-size: 1rem;
     font-weight: 450;
 }
 
+body {
+    background-color: color-mix(in srgb, var(--ui-background) 15%, var(--ui-background));
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:target {
+    scroll-margin-top: 63px;
+}
+
 :root {
-    --ui-primary: #585b84;
+    --ui-primary: #728bb0;
+    --ui-secondary: #232527;
+    --ui-background: #1d1f21;
+    --ui-bg: #1d1f21;
+    --ui-surface: #1c1b1b;
+    --ui-border: #303438;
+    --ui-bg-elevated: #728bb0;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 .actions {
     a {
-        @apply bg-neutral-100
+        @apply bg-primary text-white py-2 px-4 rounded transition duration-150 hover:bg-[#CC3F60] focus:ring-2 focus:ring-offset-2 focus:ring-primary
     }
 }
 
-
-.photo {
-    img {
-        --a: 2deg;
-        width: 250px;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        transform: perspective(400px) rotate3d(var(--r,1,-1),0,calc(var(--i,1)*var(--a)));
-        -webkit-mask:
-                linear-gradient(135deg,#000c 40%,#000,#000c 100%)
-                100% 100%/250% 250%;
-        transition: .4s;
-        cursor: pointer;
-    }
-    .alt {
-        --r: 1,1;
-        -webkit-mask:
-                linear-gradient(45deg,#000c 40%,#000,#000c 60%)
-                0 100%/250% 250%;
-    }
-    img:hover {
-        --i: -1;
-        -webkit-mask-position: 0 0;
-    }
-    .alt:hover {
-        -webkit-mask-position: 100% 0;
-    }
+.photo > img {
+    border-radius: 1%;
+    width: 240px;
+    height: 240px;
+    opacity: .6;
+    transform: rotate3d(1, 10, 1, 15deg);
 }
 
-body, header {
-    background:
-            linear-gradient(110deg, rgba(144, 161, 185, .5) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 75%,  rgba(144, 161, 185, .5) 100%);
-    background-size: contain;
+.photo > img:hover {
+    opacity: 1;
+}
+
+.navigation > div {
+    height: 100% !important;
+}
+
+.menu-link:before {
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.bg-welcome {
+    background-image: url("/images/fon.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.bg-about:before {
+    content: "";
+    position: absolute;
+    bottom: calc(-100vh - 63px);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("/images/fon.svg");
+    background-size: cover;
+    background-position: center;
+    transform: rotate(180deg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.bg-skills {
+    background-image: url("/images/fon.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-jobs {
+    background-image: url("/images/fon.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }

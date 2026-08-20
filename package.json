@@ -18,6 +18,7 @@
 		"vue-router": "^4.6.3"
 	},
 	"devDependencies": {
-		"@iconify-json/lucide": "^1.2.84"
+		"@iconify-json/lucide": "^1.2.84",
+		"prettier": "3.9.6"
 	}
 }

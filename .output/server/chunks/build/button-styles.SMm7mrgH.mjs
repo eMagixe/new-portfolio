@@ -1,0 +1,8 @@
+const button_vue_vue_type_style_index_0_scoped_19608b61_lang = ".animated-btn[data-v-19608b61]{background:#728bb080;border:1px solid var(--ui-primary);border-radius:0;color:var(--ui-primary);outline:none;transition:.5s ease-in-out}.animated-btn svg[data-v-19608b61]{fill:none;height:100%;inset:0;pointer-events:none;position:absolute;stroke:currentColor;stroke-dasharray:150 480;stroke-dashoffset:150;transition:.9s ease-in-out;width:100%}.animated-btn[data-v-19608b61]:hover{background:var(--ui-primary);color:#fff}.animated-btn:hover svg[data-v-19608b61]{stroke-dashoffset:-480}";
+
+const buttonStyles_SMm7mrgH = [
+  button_vue_vue_type_style_index_0_scoped_19608b61_lang
+];
+
+export { buttonStyles_SMm7mrgH as default };
+//# sourceMappingURL=button-styles.SMm7mrgH.mjs.map

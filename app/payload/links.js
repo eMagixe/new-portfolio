@@ -2,58 +2,58 @@ export default {
 	ru: [
 		[
 			{
-				label: 'Главная',
+				label: 'Приветствие',
 				to: '/',
-				icon: 'i-lucide-home'
+				icon: 'i-lucide-hand'
+			},
+			{
+				label: 'Биография',
+				to: '#about',
+				icon: 'i-lucide-user'
 			},
 			{
 				label: 'Опыт работы',
-				to: '/jobs',
+				to: '#jobs',
 				icon: 'i-lucide-rocket'
 			},
 			{
 				label: 'Навыки',
-				to: '/skills',
+				to: '#skills',
 				icon: 'i-lucide-code'
 			},
 			{
 				label: 'Проекты',
-				to: '/projects',
+				to: '#projects',
 				icon: 'i-lucide-folder-open'
-			},
-			{
-				label: 'Биография',
-				to: '/about',
-				icon: 'i-lucide-user'
 			}
 		]
 	],
 	en: [
 		[
 			{
-				label: 'Index',
+				label: 'Greetings',
 				to: '/en/',
-				icon: 'i-lucide-home'
+				icon: 'i-lucide-hand'
+			},
+			{
+				label: 'About Me',
+				to: '/en/#about',
+				icon: 'i-lucide-user'
 			},
 			{
 				label: 'Work Experience',
-				to: '/en/jobs',
+				to: '/en/#jobs',
 				icon: 'i-lucide-rocket'
 			},
 			{
 				label: 'Skills',
-				to: '/en/skills',
+				to: '/en/#skills',
 				icon: 'i-lucide-code'
 			},
 			{
 				label: 'Projects',
-				to: '/en/projects',
+				to: '/en/#projects',
 				icon: 'i-lucide-folder-open'
-			},
-			{
-				label: 'About Me',
-				to: '/en/about',
-				icon: 'i-lucide-user'
 			}
 		]
 	]

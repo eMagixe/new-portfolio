@@ -21,17 +21,17 @@ const main = computed(() => {
 			<ActionsLogo />
 		</template>
 
-		<UNavigationMenu :items="main" />
+		<UNavigationMenu class="h-full navigation" :items="main" />
 
 		<template #right>
 			<ActionsContacts />
-			<SelectLocale />
+			<div class="not-lg:hidden!">
+				<SelectLocale />
+			</div>
 		</template>
 
 		<template #body>
-			<UNavigationMenu :items="main" orientation="vertical" />
+			<UNavigationMenu class="bg-border" :items="main" orientation="vertical" />
 		</template>
 	</UHeader>
 </template>
-
-<style scoped></style>

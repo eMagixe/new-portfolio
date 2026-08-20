@@ -1,4 +1,5 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
 	<ActionsTop />
@@ -7,5 +8,5 @@
 			<NuxtPage />
 		</UApp>
 	</UMain>
-	<SectionFooter/>
+	<SectionFooter />
 </template>

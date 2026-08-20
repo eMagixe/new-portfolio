@@ -4,18 +4,12 @@ import appConfig from '~/app.config'
 
 const items: NavigationMenuItem[] = []
 
-const route = useRoute()
-
-const visible = computed(() => {
-	return !(route.name === 'index___en' || route.name === 'index___ru')
-})
-
 </script>
 
 <template>
-	<UFooter v-if="visible" class="border border-t-gray-200 border-b-0 border-x-0">
+	<UFooter class="border-t border-t-primary/10">
 		<template #left>
-			<p class="text-muted text-sm">{{ appConfig.footer.credits }}</p>
+			<p class="text-ui-muted text-sm">{{ appConfig.footer.credits }}</p>
 		</template>
 
 		<UNavigationMenu :items="items" variant="link" />

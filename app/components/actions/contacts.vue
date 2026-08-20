@@ -6,46 +6,41 @@ const { locale } = useI18n()
 
 <template>
 	<UButton
+		variant="ghost"
 		icon="i-simple-icons-telegram"
-		color="neutral"
-		variant="ghost"
-		:to="appConfig.global.telegram"
+		:href="appConfig.global.telegram"
 		target="_blank"
-		aria-label="Telegram"
+		:aria-label="'Telegram'"
 	/>
 	<UButton
+		variant="ghost"
 		icon="i-simple-icons-gmail"
-		color="neutral"
-		variant="ghost"
-		:to="`mailto:${appConfig.global.email}?subject=Hello, from your site}`"
+		:href="`mailto:${appConfig.global.email}?subject=Hello, from your site}`"
 		target="_blank"
-		aria-label="X"
+		:aria-label="'X'"
 	/>
 	<UButton
+		variant="ghost"
 		icon="i-simple-icons-github"
-		color="neutral"
-		variant="ghost"
-		:to="appConfig.global.github"
+		:href="appConfig.global.github"
 		target="_blank"
-		aria-label="GitHub"
+		:aria-label="'GitHub'"
 	/>
 	<UButton
+		variant="ghost"
 		v-if="locale === 'ru'"
 		icon="i-lucide-download"
-		color="neutral"
-		variant="ghost"
-		:to="appConfig.global.resume.ru"
+		:href="appConfig.global.resume.ru"
 		target="_blank"
-		aria-label="Download PDF"
+		:aria-label="'Download PDF'"
 	/>
 	<UButton
+		variant="ghost"
 		v-else
 		icon="i-lucide-download"
-		color="neutral"
-		variant="ghost"
-		:to="appConfig.global.resume.en"
+		:href="appConfig.global.resume.en"
 		target="_blank"
-		aria-label="Download PDF"
+		:aria-label="'Download PDF'"
 	/>
 </template>
 

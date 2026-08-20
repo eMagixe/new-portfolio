@@ -5,11 +5,11 @@
 		"buttons": {
 			"projects": {
 				"text": "My projects",
-				"to": "/en/projects"
+				"to": "#projects"
 			},
 			"about": {
 				"text": "About me",
-				"to": "/en/about"
+				"to": "#about"
 			}
 		},
 		"skills": "Main development tools",
@@ -19,7 +19,7 @@
 		}
 	},
 	"jobs": {
-		"title": "Work Experience",
+		"title": "What is my work experience?",
 		"block_info": {
 			"title": "Additional Information",
 			"description": "Throughout my career I worked as a programmer in several other places and learned languages such as PHP, C, C++, and C#, but I do not list them here because they are not part of my main specialization."
@@ -27,20 +27,10 @@
 		"seo": {
 			"title": "Work Experience - Max Evchenko",
 			"description": "A list of places where Max Evchenko worked, a Frontend Developer with many years of experience building modern web applications."
-		},
-		"buttons": {
-			"prev": {
-				"text": "Home",
-				"to": "/en/"
-			},
-			"next": {
-				"text": "Skills",
-				"to": "/en/skills"
-			}
 		}
 	},
 	"skills": {
-		"title": "Skills",
+		"title": "What skills do I possess?",
 		"subtitle": {
 			"first": "Primary tools",
 			"second": "Additional tools"
@@ -52,37 +42,17 @@
 		"seo": {
 			"title": "Skills and Technologies - Max Evchenko",
 			"description": "A list of skills and tools known by Max Evchenko, a Frontend Developer with many years of experience building modern web applications."
-		},
-		"buttons": {
-			"prev": {
-				"text": "Work Experience",
-				"to": "/en/jobs"
-			},
-			"next": {
-				"text": "My Projects",
-				"to": "/en/projects"
-			}
 		}
 	},
 	"projects": {
-		"title": "Projects list",
+		"title": "What projects have I worked on?",
 		"seo": {
 			"title": "Projects - Max Evchenko",
 			"description": "A list of projects participated in by Max Evchenko, a Frontend Developer with many years of experience building modern web applications."
-		},
-		"buttons": {
-			"prev": {
-				"text": "Skills",
-				"to": "/en/skills"
-			},
-			"next": {
-				"text": "About me",
-				"to": "/en/about"
-			}
 		}
 	},
 	"about": {
-		"title": "About me",
+		"title": "How did it all begin?",
 		"seo": {
 			"title": "About Me - Max Evchenko",
 			"description": "Max Evchenko - Frontend developer with many years of experience building modern web applications. Skilled in Vue.js, Nuxt.js, TypeScript, Tailwind CSS and other technologies for developing high-quality user interfaces."
@@ -97,7 +67,7 @@
 				"text": "When Vue.js was added to Laravel, I was excited by its capabilities and decided to switch to Front-End development. While learning Vue.js I also discovered Node.js and deepened my understanding of JavaScript and its new features. I became familiar with the web technologies listed in the Skills section by solving real tasks and gaining experience. They are described chronologically in the",
 				"link": {
 					"text": "Work Experience",
-					"to": "/en/jobs"
+					"to": "#jobs"
 				}
 			},
 			"nuxt_block": {
@@ -109,18 +79,8 @@
 				"text": "I continue to study new technologies and tools in web development. Just like the Internet, which never stands still, I strive to keep up and improve. I apply all my skills and knowledge in my projects, which you can view in the",
 				"link": {
 					"text": "Projects",
-					"to": "/en/projects"
+					"to": "#projects"
 				}
-			}
-		},
-		"buttons": {
-			"prev": {
-				"text": "Projects",
-				"to": "/en/projects"
-			},
-			"next": {
-				"text": "Home",
-				"to": "/en/"
 			}
 		}
 	}

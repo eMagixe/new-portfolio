@@ -1,22 +1,21 @@
 <script setup lang="ts">
-const {page} = defineProps<{
+const { page } = defineProps<{
 	page: string
 }>()
 </script>
 
 <template>
 	<div class="actions flex flex-row justify-between items-center w-full mb-10">
-		<UButton icon="i-lucide-arrow-left" :to="$t(`${page}.buttons.prev.to`)" color="neutral" variant="outline">
-			{{ $t(`${page}.buttons.prev.text`) }}
-		</UButton>
+		<AnimatedButton
+			icon="i-lucide-arrow-left"
+			:label="$t(`${page}.buttons.prev.text`)"
+			:to="$t(`${page}.buttons.prev.to`)"
+		/>
 		<p>{{ $t(`${page}.title`) }}</p>
-		<UButton
+		<AnimatedButton
+			:label="$t(`${page}.buttons.next.text`)"
 			trailing-icon="i-lucide-arrow-right"
 			:to="$t(`${page}.buttons.next.to`)"
-			color="neutral"
-			variant="outline"
-		>
-			{{ $t(`${page}.buttons.next.text`) }}
-		</UButton>
+		/>
 	</div>
 </template>

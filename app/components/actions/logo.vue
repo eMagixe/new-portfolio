@@ -8,13 +8,13 @@ const props = defineProps({
 </script>
 
 <template>
-	<NuxtLink to="/" class="flex items-center justify-center">
+	<NuxtLink to="/" class="flex items-center justify-center gap-1">
 		<span
-			class="bg-gray-500 text-gray-100! border-gray-500 border-2 border-r-0 px-0.5"
+			class=""
 			:class="`text-${props.size}`"
 		>
-			DEV
+			Frontend
 		</span>
-		<span class="border-2 border-gray-500 px-1 text-gray-500!" :class="`text-${props.size}`">Frontend</span>
+		<span class="font-bold text-primary!" :class="`text-${props.size}`">Engineer</span>
 	</NuxtLink>
 </template>

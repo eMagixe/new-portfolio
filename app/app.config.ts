@@ -43,9 +43,29 @@ export default defineAppConfig({
 				}
 			}
 		},
+		navigationMenu: {
+			slots: {
+				list: 'h-full items-start',
+				item: 'h-full p-0!',
+				link: 'h-full hover:bg-secondary/60 menu-link'
+			}
+		},
 		pageSection: {
 			slots: {
 				container: 'flex flex-col lg:grid py-5 sm:projects-5 lg:projects-5 gap-5 sm:gap-5'
+			}
+		},
+		header: {
+			slots: {
+				root: 'bg-background',
+				content: 'bg-border',
+				center: 'h-full'
+			}
+		},
+		marquee: {
+			slots: {
+				root: 'before-after',
+				content: 'bg-background!'
 			}
 		}
 	}

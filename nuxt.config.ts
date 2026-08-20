@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	compatibilityDate: '2025-07-15',
 	css: ['~/assets/css/main.css'],
@@ -6,7 +5,7 @@ export default defineNuxtConfig({
 	icon: {
 		serverBundle: 'local'
 	},
-	devtools: { enabled: true },
+	devtools: { enabled: false },
 	app: {
 		head: {
 			htmlAttrs: {
@@ -26,7 +25,7 @@ export default defineNuxtConfig({
 		}
 	},
 	ui: {
-		colorMode: false,
+		colorMode: true,
 		experimental: {
 			componentDetection: true
 		}

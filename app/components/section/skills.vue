@@ -1,37 +1,78 @@
 <script setup lang="ts">
-const items = Array.from({ length: 30 }, (_, i) => ({
-	id: i + 1,
-	title: `Item ${i + 1}`,
-	description: `Description for item ${i + 1}`
-}))
+const { locale } = useI18n()
+
+const first_skills = computed(() => {
+	return locale.value === 'ru' ? useAppConfig().ru.skills.first : useAppConfig().en.skills.first
+})
+
+const secondary_skills = computed(() => {
+	return locale.value === 'ru' ? useAppConfig().ru.skills.second : useAppConfig().en.skills.second
+})
 </script>
 
 <template>
-	<section class="p-5">
-		<h2 class="text-3xl font-bold mb-5">Навыки</h2>
-		<h1>{{ $t('welcome') }}</h1>
-		<UPageCard v-for="item in items" v-bind="item" class="rounded-none" />
-	</section>
+	<div id="skills" class="bg-primary/10 not-sm:py-10 sm:py-20 min-h-screen bg-skills">
+		<UContainer>
+			<h2 class="title not-sm:text-center">{{ $t('skills.title') }}</h2>
+			<div class="w-full flex flex-col md:flex-row justify-start items-start gap-5">
+				<section>
+					<h3 class="mt-5 mb-5 pb-5 not-sm:text-center text-ui-text">
+						{{ $t('skills.subtitle.first').toUpperCase() }}
+					</h3>
+					<UPageList>
+						<UPageCard
+							v-for="(skill, index) in first_skills"
+							:key="index"
+							variant="ghost"
+							:to="skill.to"
+							:target="skill.target"
+						>
+							<template #body>
+								<div class="w-full flex flex-row justify-start items-center gap-5">
+									<UIcon :name="skill.icon" class="size-10 shrink-0" />
+									<div>
+										<h2>{{ skill.name }}</h2>
+										<p class="mt-2 text-sm md:h-[50px] text-ui-muted">{{ skill.description }}</p>
+									</div>
+								</div>
+							</template>
+						</UPageCard>
+					</UPageList>
+				</section>
+				<section>
+					<h3 class="mt-5 mb-5 pb-5 not-sm:text-center text-ui-text">
+						{{ $t('skills.subtitle.second').toUpperCase() }}
+					</h3>
+					<UPageList>
+						<UPageCard
+							v-for="(skill, index) in secondary_skills"
+							:key="index"
+							variant="ghost"
+							:to="skill.to"
+							:target="skill.target"
+						>
+							<template #body>
+								<div class="w-full flex flex-row justify-start items-center gap-5">
+									<UIcon :name="skill.icon" class="size-10 shrink-0" />
+									<div>
+										<h2>{{ skill.name }}</h2>
+										<p class="mt-2 text-sm md:h-[50px] text-ui-muted">{{ skill.description }}</p>
+									</div>
+								</div>
+							</template>
+						</UPageCard>
+					</UPageList>
+				</section>
+			</div>
+			<UAlert
+				color="neutral"
+				:title="$t('skills.block_info.title')"
+				:description="$t('skills.block_info.description')"
+				icon="i-lucide-info"
+				class="my-10 bg-ui-surface text-ui-text"
+			/>
+		</UContainer>
+	</div>
 </template>
 
-<style>
-.skill-item {
-	width: calc(100vw / 3);
-	height: calc(100vh - 250px);
-	background-color: #f0f0f0;
-	border-radius: 8px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-weight: bold;
-}
-
-.skill-item:hover {
-	transform: scale(1.05);
-	transition: transform 0.8s;
-}
-
-.skill-item:not(:hover) {
-	transition: transform 0.8s;
-}
-</style>
+<style scoped></style>
