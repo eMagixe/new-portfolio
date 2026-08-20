@@ -1,5 +1,5 @@
 <template>
-	<div id="about" class="bg-primary/60 border border-primary/60 not-sm:py-10 sm:py-20 min-h-screen bg-about">
+	<div id="about" class="bg-primary/60 border-t border-primary/60 not-sm:py-10 sm:py-20 min-h-screen bg-about">
 		<UContainer>
 			<h2 class="my-5 title not-sm:text-center">{{ $t('about.content.start_block.title') }}</h2>
 			<p>

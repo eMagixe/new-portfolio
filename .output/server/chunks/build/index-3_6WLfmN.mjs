@@ -187,7 +187,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       const _component_UMarquee = _sfc_main$2;
       const _component_UTooltip = _sfc_main$3;
       const _component_UIcon = _sfc_main$3$1;
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "h-screen bg-welcome" }, _attrs))}><div class="flex flex-col justify-center items-center pt-10 photo">`);
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "h-screen bg-welcome border-b-2 border-default" }, _attrs))}><div class="flex flex-col justify-center items-center pt-10 photo">`);
       _push(ssrRenderComponent(_component_NuxtImg, {
         alt: "photo",
         src: "/images/photo.png",
@@ -305,10 +305,10 @@ const createLazyVisibleComponent = defineLazyComponent(
   },
   (props) => hydrateOnVisible(props.hydrateOnVisible === true ? void 0 : props.hydrateOnVisible)
 );
-const __nuxt_component_1_lazy_visible = createLazyVisibleComponent("components/section/about.vue", () => import('./about-BBO8ryJz.mjs').then((c) => c.default || c));
+const __nuxt_component_1_lazy_visible = createLazyVisibleComponent("components/section/about.vue", () => import('./about-DxtZyxQU.mjs').then((c) => c.default || c));
 const __nuxt_component_2_lazy_visible = createLazyVisibleComponent("components/section/jobs.vue", () => import('./jobs-Cd9x8iVL.mjs').then((c) => c.default || c));
 const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/skills.vue", () => import('./skills-DKcJvsxA.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy_visible = createLazyVisibleComponent("components/section/projects.vue", () => import('./projects-BrnECSFI.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy_visible = createLazyVisibleComponent("components/section/projects.vue", () => import('./projects-DwLD5P5J.mjs').then((c) => c.default || c));
 const _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_SectionWelcome = __nuxt_component_0;
@@ -337,4 +337,4 @@ const index$1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePrope
 }, Symbol.toStringTag, { value: "Module" }));
 
 export { _sfc_main$2 as _, index$1 as i };
-//# sourceMappingURL=index-7seO3MxZ.mjs.map
+//# sourceMappingURL=index-3_6WLfmN.mjs.map
