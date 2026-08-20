@@ -308,7 +308,7 @@ const createLazyVisibleComponent = defineLazyComponent(
 const __nuxt_component_1_lazy_visible = createLazyVisibleComponent("components/section/about.vue", () => import('./about-CcEphuHp.mjs').then((c) => c.default || c));
 const __nuxt_component_2_lazy_visible = createLazyVisibleComponent("components/section/jobs.vue", () => import('./jobs-Cd9x8iVL.mjs').then((c) => c.default || c));
 const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/skills.vue", () => import('./skills-DKcJvsxA.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy_visible = createLazyVisibleComponent("components/section/projects.vue", () => import('./projects-DxiLjLao.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy_visible = createLazyVisibleComponent("components/section/projects.vue", () => import('./projects--Yj9IDky.mjs').then((c) => c.default || c));
 const _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_SectionWelcome = __nuxt_component_0;
@@ -337,4 +337,4 @@ const index$1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePrope
 }, Symbol.toStringTag, { value: "Module" }));
 
 export { _sfc_main$2 as _, index$1 as i };
-//# sourceMappingURL=index-DrLwD-BK.mjs.map
+//# sourceMappingURL=index-C_48-1_Y.mjs.map

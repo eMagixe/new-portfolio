@@ -45,6 +45,14 @@ const getImages = (project: Ref, allProjects: Ref, slug: Ref<string>) => {
 }
 
 const images = computed(() => getImages(selectedProject, projects, currentProjectSlug))
+
+const fullscreen = ref(false)
+const currentImageUrl = ref('')
+
+const selectImage = (item: string) => {
+	currentImageUrl.value = item
+	fullscreen.value = true
+}
 </script>
 
 <template>
@@ -91,15 +99,32 @@ const images = computed(() => getImages(selectedProject, projects, currentProjec
 				class-names
 				:arrows="images && images.length > 1"
 				:items="images"
-				class="mx-auto w-full mb-5"
+				class="mx-auto w-full mb-15 rounded-xl"
 			>
 				<img
 					:alt="currentProjectSlug + useId()"
 					:src="item as string"
+					@click="selectImage(item as string)"
 					loading="lazy"
-					class="mx-auto w-full object-cover"
+					class="mx-auto w-full object-cover border border-primary"
 				/>
 			</UCarousel>
+
+			<UModal
+				:open="fullscreen"
+				@update:open="fullscreen = false"
+				fullscreen
+				:title="selectedProject?.name + ' - ' + selectedProject?.description"
+			>
+				<template #body>
+					<img
+						:alt="currentProjectSlug + useId()"
+						:src="currentImageUrl"
+						loading="lazy"
+						class="mx-auto w-full object-cover"
+					/>
+				</template>
+			</UModal>
 		</UContainer>
 	</div>
 </template>

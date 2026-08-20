@@ -1,5 +1,5 @@
 import { _ as _sfc_main$2 } from './Container-DctvYi3A.mjs';
-import { _ as _sfc_main$2$1 } from './index-DrLwD-BK.mjs';
+import { _ as _sfc_main$2$1 } from './index-C_48-1_Y.mjs';
 import { _ as _sfc_main$3 } from './PageCard-D8xAQhXv.mjs';
 import { a as _sfc_main$4, t as tv } from './Tooltip-B4LAymKA.mjs';
 import { defineComponent, ref, computed, mergeProps, withCtx, unref, createVNode, toDisplayString, openBlock, createBlock, Fragment, renderList, useId, watch, renderSlot, createCommentVNode, useSSRContext } from 'vue';
@@ -7,8 +7,9 @@ import { ssrRenderAttrs, ssrRenderComponent, ssrInterpolate, ssrRenderList, ssrR
 import useEmblaCarousel from 'embla-carousel-vue';
 import { useForwardProps, Primitive } from 'reka-ui';
 import { reactivePick } from '@vueuse/core';
-import { u as useLocale, _ as _sfc_main$5 } from './Button-DDZVeAG-.mjs';
+import { u as useLocale, _ as _sfc_main$6 } from './Button-DDZVeAG-.mjs';
 import { b as useI18n, a as useAppConfig } from './server.mjs';
+import { _ as _sfc_main$5 } from './Modal-Rap96-X_.mjs';
 import '../nitro/nitro.mjs';
 import 'node:http';
 import 'node:https';
@@ -236,7 +237,7 @@ const _sfc_main$1 = {
               _push2(`<div data-slot="controls" class="${ssrRenderClass(ui.value.controls({ class: props.ui?.controls }))}"${_scopeId}>`);
               if (__props.arrows) {
                 _push2(`<div data-slot="arrows" class="${ssrRenderClass(ui.value.arrows({ class: props.ui?.arrows }))}"${_scopeId}>`);
-                _push2(ssrRenderComponent(_sfc_main$5, mergeProps({
+                _push2(ssrRenderComponent(_sfc_main$6, mergeProps({
                   disabled: !canScrollPrev.value,
                   icon: prevIcon.value,
                   color: "neutral",
@@ -247,7 +248,7 @@ const _sfc_main$1 = {
                   class: ui.value.prev({ class: props.ui?.prev }),
                   onClick: scrollPrev
                 }), null, _parent2, _scopeId));
-                _push2(ssrRenderComponent(_sfc_main$5, mergeProps({
+                _push2(ssrRenderComponent(_sfc_main$6, mergeProps({
                   disabled: !canScrollNext.value,
                   icon: nextIcon.value,
                   color: "neutral",
@@ -310,7 +311,7 @@ const _sfc_main$1 = {
                   "data-slot": "arrows",
                   class: ui.value.arrows({ class: props.ui?.arrows })
                 }, [
-                  createVNode(_sfc_main$5, mergeProps({
+                  createVNode(_sfc_main$6, mergeProps({
                     disabled: !canScrollPrev.value,
                     icon: prevIcon.value,
                     color: "neutral",
@@ -321,7 +322,7 @@ const _sfc_main$1 = {
                     class: ui.value.prev({ class: props.ui?.prev }),
                     onClick: scrollPrev
                   }), null, 16, ["disabled", "icon", "aria-label", "class"]),
-                  createVNode(_sfc_main$5, mergeProps({
+                  createVNode(_sfc_main$6, mergeProps({
                     disabled: !canScrollNext.value,
                     icon: nextIcon.value,
                     color: "neutral",
@@ -400,12 +401,19 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }
     };
     const images = computed(() => getImages(selectedProject, projects2, currentProjectSlug));
+    const fullscreen = ref(false);
+    const currentImageUrl = ref("");
+    const selectImage = (item) => {
+      currentImageUrl.value = item;
+      fullscreen.value = true;
+    };
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UContainer = _sfc_main$2;
       const _component_UMarquee = _sfc_main$2$1;
       const _component_UPageCard = _sfc_main$3;
       const _component_UTooltip = _sfc_main$4;
       const _component_UCarousel = _sfc_main$1;
+      const _component_UModal = _sfc_main$5;
       _push(`<div${ssrRenderAttrs(mergeProps({
         id: "projects",
         class: "not-sm:py-10 sm:py-20 min-h-screen bg-welcome"
@@ -523,16 +531,39 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               "class-names": "",
               arrows: unref(images) && unref(images).length > 1,
               items: unref(images),
-              class: "mx-auto w-full mb-5"
+              class: "mx-auto w-full mb-15 rounded-xl"
             }, {
               default: withCtx(({ item }, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`<img${ssrRenderAttr("alt", unref(currentProjectSlug) + ("useId" in _ctx ? _ctx.useId : unref(useId))())}${ssrRenderAttr("src", item)} loading="lazy" class="mx-auto w-full object-cover"${_scopeId2}>`);
+                  _push3(`<img${ssrRenderAttr("alt", unref(currentProjectSlug) + ("useId" in _ctx ? _ctx.useId : unref(useId))())}${ssrRenderAttr("src", item)} loading="lazy" class="mx-auto w-full object-cover border border-primary"${_scopeId2}>`);
                 } else {
                   return [
                     createVNode("img", {
                       alt: unref(currentProjectSlug) + ("useId" in _ctx ? _ctx.useId : unref(useId))(),
                       src: item,
+                      onClick: ($event) => selectImage(item),
+                      loading: "lazy",
+                      class: "mx-auto w-full object-cover border border-primary"
+                    }, null, 8, ["alt", "src", "onClick"])
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_component_UModal, {
+              open: unref(fullscreen),
+              "onUpdate:open": ($event) => fullscreen.value = false,
+              fullscreen: "",
+              title: unref(selectedProject)?.name + " - " + unref(selectedProject)?.description
+            }, {
+              body: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`<img${ssrRenderAttr("alt", unref(currentProjectSlug) + ("useId" in _ctx ? _ctx.useId : unref(useId))())}${ssrRenderAttr("src", unref(currentImageUrl))} loading="lazy" class="mx-auto w-full object-cover"${_scopeId2}>`);
+                } else {
+                  return [
+                    createVNode("img", {
+                      alt: unref(currentProjectSlug) + ("useId" in _ctx ? _ctx.useId : unref(useId))(),
+                      src: unref(currentImageUrl),
                       loading: "lazy",
                       class: "mx-auto w-full object-cover"
                     }, null, 8, ["alt", "src"])
@@ -587,18 +618,35 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 "class-names": "",
                 arrows: unref(images) && unref(images).length > 1,
                 items: unref(images),
-                class: "mx-auto w-full mb-5"
+                class: "mx-auto w-full mb-15 rounded-xl"
               }, {
                 default: withCtx(({ item }) => [
                   createVNode("img", {
                     alt: unref(currentProjectSlug) + ("useId" in _ctx ? _ctx.useId : unref(useId))(),
                     src: item,
+                    onClick: ($event) => selectImage(item),
+                    loading: "lazy",
+                    class: "mx-auto w-full object-cover border border-primary"
+                  }, null, 8, ["alt", "src", "onClick"])
+                ]),
+                _: 1
+              }, 8, ["arrows", "items"]),
+              createVNode(_component_UModal, {
+                open: unref(fullscreen),
+                "onUpdate:open": ($event) => fullscreen.value = false,
+                fullscreen: "",
+                title: unref(selectedProject)?.name + " - " + unref(selectedProject)?.description
+              }, {
+                body: withCtx(() => [
+                  createVNode("img", {
+                    alt: unref(currentProjectSlug) + ("useId" in _ctx ? _ctx.useId : unref(useId))(),
+                    src: unref(currentImageUrl),
                     loading: "lazy",
                     class: "mx-auto w-full object-cover"
                   }, null, 8, ["alt", "src"])
                 ]),
                 _: 1
-              }, 8, ["arrows", "items"])
+              }, 8, ["open", "onUpdate:open", "title"])
             ];
           }
         }),
@@ -617,4 +665,4 @@ _sfc_main.setup = (props, ctx) => {
 const projects = Object.assign(_sfc_main, { __name: "SectionProjects" });
 
 export { projects as default };
-//# sourceMappingURL=projects-DxiLjLao.mjs.map
+//# sourceMappingURL=projects--Yj9IDky.mjs.map
