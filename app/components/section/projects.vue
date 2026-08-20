@@ -110,12 +110,7 @@ const selectImage = (item: string) => {
 				/>
 			</UCarousel>
 
-			<UModal
-				:open="fullscreen"
-				@update:open="fullscreen = false"
-				fullscreen
-				:title="selectedProject?.name + ' - ' + selectedProject?.description"
-			>
+			<UModal :open="fullscreen" @update:open="fullscreen = false" fullscreen>
 				<template #body>
 					<img
 						:alt="currentProjectSlug + useId()"

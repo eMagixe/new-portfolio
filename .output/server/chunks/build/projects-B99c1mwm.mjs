@@ -1,5 +1,5 @@
 import { _ as _sfc_main$2 } from './Container-DctvYi3A.mjs';
-import { _ as _sfc_main$2$1 } from './index-C_48-1_Y.mjs';
+import { _ as _sfc_main$2$1 } from './index-CGU0Obp9.mjs';
 import { _ as _sfc_main$3 } from './PageCard-D8xAQhXv.mjs';
 import { a as _sfc_main$4, t as tv } from './Tooltip-B4LAymKA.mjs';
 import { defineComponent, ref, computed, mergeProps, withCtx, unref, createVNode, toDisplayString, openBlock, createBlock, Fragment, renderList, useId, watch, renderSlot, createCommentVNode, useSSRContext } from 'vue';
@@ -553,8 +553,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _push2(ssrRenderComponent(_component_UModal, {
               open: unref(fullscreen),
               "onUpdate:open": ($event) => fullscreen.value = false,
-              fullscreen: "",
-              title: unref(selectedProject)?.name + " - " + unref(selectedProject)?.description
+              fullscreen: ""
             }, {
               body: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
@@ -634,8 +633,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               createVNode(_component_UModal, {
                 open: unref(fullscreen),
                 "onUpdate:open": ($event) => fullscreen.value = false,
-                fullscreen: "",
-                title: unref(selectedProject)?.name + " - " + unref(selectedProject)?.description
+                fullscreen: ""
               }, {
                 body: withCtx(() => [
                   createVNode("img", {
@@ -646,7 +644,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                   }, null, 8, ["alt", "src"])
                 ]),
                 _: 1
-              }, 8, ["open", "onUpdate:open", "title"])
+              }, 8, ["open", "onUpdate:open"])
             ];
           }
         }),
@@ -665,4 +663,4 @@ _sfc_main.setup = (props, ctx) => {
 const projects = Object.assign(_sfc_main, { __name: "SectionProjects" });
 
 export { projects as default };
-//# sourceMappingURL=projects--Yj9IDky.mjs.map
+//# sourceMappingURL=projects-B99c1mwm.mjs.map
