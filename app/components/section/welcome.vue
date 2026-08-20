@@ -27,7 +27,7 @@ const icons = [
 </script>
 
 <template>
-	<div class="min-h-screen bg-welcome border-b-2 border-default">
+	<div class="min-h-screen bg-welcome border-b-2 border-default pb-10">
 		<div class="flex flex-col justify-center items-center pt-10 photo">
 			<NuxtImg
 				alt="photo"
