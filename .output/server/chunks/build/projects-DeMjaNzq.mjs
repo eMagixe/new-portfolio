@@ -1,5 +1,5 @@
 import { _ as _sfc_main$2 } from './Container-DctvYi3A.mjs';
-import { _ as _sfc_main$2$1 } from './index-CGU0Obp9.mjs';
+import { _ as _sfc_main$2$1 } from './index-CLyX2Q4i.mjs';
 import { _ as _sfc_main$3 } from './PageCard-D8xAQhXv.mjs';
 import { a as _sfc_main$4, t as tv } from './Tooltip-B4LAymKA.mjs';
 import { defineComponent, ref, computed, mergeProps, withCtx, unref, createVNode, toDisplayString, openBlock, createBlock, Fragment, renderList, useId, watch, renderSlot, createCommentVNode, useSSRContext } from 'vue';
@@ -535,7 +535,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             }, {
               default: withCtx(({ item }, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`<img${ssrRenderAttr("alt", unref(currentProjectSlug) + ("useId" in _ctx ? _ctx.useId : unref(useId))())}${ssrRenderAttr("src", item)} loading="lazy" class="mx-auto w-full object-cover border border-primary"${_scopeId2}>`);
+                  _push3(`<img${ssrRenderAttr("alt", unref(currentProjectSlug) + ("useId" in _ctx ? _ctx.useId : unref(useId))())}${ssrRenderAttr("src", item)} loading="lazy" class="mx-auto w-full object-cover border border-primary zoom-in"${_scopeId2}>`);
                 } else {
                   return [
                     createVNode("img", {
@@ -543,7 +543,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                       src: item,
                       onClick: ($event) => selectImage(item),
                       loading: "lazy",
-                      class: "mx-auto w-full object-cover border border-primary"
+                      class: "mx-auto w-full object-cover border border-primary zoom-in"
                     }, null, 8, ["alt", "src", "onClick"])
                   ];
                 }
@@ -625,7 +625,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     src: item,
                     onClick: ($event) => selectImage(item),
                     loading: "lazy",
-                    class: "mx-auto w-full object-cover border border-primary"
+                    class: "mx-auto w-full object-cover border border-primary zoom-in"
                   }, null, 8, ["alt", "src", "onClick"])
                 ]),
                 _: 1
@@ -663,4 +663,4 @@ _sfc_main.setup = (props, ctx) => {
 const projects = Object.assign(_sfc_main, { __name: "SectionProjects" });
 
 export { projects as default };
-//# sourceMappingURL=projects-B99c1mwm.mjs.map
+//# sourceMappingURL=projects-DeMjaNzq.mjs.map

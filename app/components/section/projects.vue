@@ -106,7 +106,7 @@ const selectImage = (item: string) => {
 					:src="item as string"
 					@click="selectImage(item as string)"
 					loading="lazy"
-					class="mx-auto w-full object-cover border border-primary"
+					class="mx-auto w-full object-cover border border-primary zoom-in"
 				/>
 			</UCarousel>
 
