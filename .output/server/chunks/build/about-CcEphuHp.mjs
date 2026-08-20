@@ -38,8 +38,8 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_NuxtLink = __nuxt_component_1;
   _push(`<div${ssrRenderAttrs(mergeProps({
     id: "about",
-    class: "bg-primary/60 border-t border-primary/60 not-sm:py-10 sm:py-20 min-h-screen bg-about"
-  }, _attrs))}>`);
+    class: "bg-primary/60 border-t border-primary/60 min-h-screen bg-about"
+  }, _attrs))}><div class="backdrop-blur-sm not-sm:py-10 sm:py-20 min-h-screen">`);
   _push(ssrRenderComponent(_component_UContainer, null, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
@@ -113,7 +113,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
     }),
     _: 1
   }, _parent));
-  _push(`</div>`);
+  _push(`</div></div>`);
 }
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
@@ -124,4 +124,4 @@ _sfc_main.setup = (props, ctx) => {
 const about = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionAbout" });
 
 export { about as default };
-//# sourceMappingURL=about-DxtZyxQU.mjs.map
+//# sourceMappingURL=about-CcEphuHp.mjs.map

@@ -1,5 +1,5 @@
 import { _ as _sfc_main$2 } from './Container-DctvYi3A.mjs';
-import { _ as _sfc_main$2$1 } from './index-BnOchtK8.mjs';
+import { _ as _sfc_main$2$1 } from './index-DrLwD-BK.mjs';
 import { _ as _sfc_main$3 } from './PageCard-D8xAQhXv.mjs';
 import { a as _sfc_main$4, t as tv } from './Tooltip-B4LAymKA.mjs';
 import { defineComponent, ref, computed, mergeProps, withCtx, unref, createVNode, toDisplayString, openBlock, createBlock, Fragment, renderList, useId, watch, renderSlot, createCommentVNode, useSSRContext } from 'vue';
@@ -617,4 +617,4 @@ _sfc_main.setup = (props, ctx) => {
 const projects = Object.assign(_sfc_main, { __name: "SectionProjects" });
 
 export { projects as default };
-//# sourceMappingURL=projects-DhPVv1s9.mjs.map
+//# sourceMappingURL=projects-DxiLjLao.mjs.map
