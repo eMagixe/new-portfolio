@@ -1,6 +1,18 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-     width="1440" height="800" preserveAspectRatio="none" viewBox="0 0 1440 800">
-    <g mask="url(&quot;#SvgjsMask1030&quot;)" fill="none">
+     width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1440 800">
+    <style>
+      .responsive-art { transform-box: view-box; transform-origin: center; }
+      @media (max-width: 767px) {
+        .responsive-art { transform: scale(0.62); }
+      }
+      @media (min-width: 768px) and (max-width: 1199px) {
+        .responsive-art { transform: scale(0.82); }
+      }
+      @media (min-width: 1200px) {
+        .responsive-art { transform: scale(1); }
+      }
+    </style>
+    <g class="responsive-art" mask="url(&quot;#SvgjsMask1030&quot;)" fill="none">
         <rect width="1440" height="800" x="0" y="0" fill="none"></rect>
         <path d="M-95.94 642.75L-95.94 642.75" stroke="rgba(42, 44, 45, 1)" stroke-width="1.5"></path>
         <path d="M-95.94 642.75L-110.74 790.53" stroke="rgba(42, 44, 45, 1)" stroke-width="1.5"></path>

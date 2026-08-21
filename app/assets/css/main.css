@@ -114,16 +114,16 @@ html {
 
 .bg-skills {
     background-image: url("/images/fon.svg");
-    background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .bg-jobs {
     background-image: url("/images/fon.svg");
-    background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
 }
 
