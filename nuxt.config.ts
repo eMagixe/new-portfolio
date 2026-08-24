@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
 	compatibilityDate: '2025-07-15',
+	version: '0.9.1',
 	css: ['~/assets/css/main.css'],
 	modules: ['@nuxt/ui', '@nuxtjs/i18n', '@nuxt/image'],
 	icon: {
