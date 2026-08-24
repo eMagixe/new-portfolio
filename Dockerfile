@@ -1,18 +1,18 @@
+# ---------- Build ----------
 FROM node:26-alpine AS builder
 
 WORKDIR /app
 
-RUN corepack enable
+COPY package*.json ./
 
-COPY package.json pnpm-lock.yaml ./
-
-RUN pnpm install --frozen-lockfile
+RUN npm ci
 
 COPY . .
 
-RUN pnpm build
+RUN npm run build
 
 
+# ---------- Production ----------
 FROM node:26-alpine AS runner
 
 WORKDIR /app
