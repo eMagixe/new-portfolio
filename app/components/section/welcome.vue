@@ -31,8 +31,10 @@ const icons = [
 		<div class="flex flex-col justify-center items-center pt-10 photo">
 			<NuxtImg
 				alt="photo"
-				src="/images/photo.png"
+				src="/images/photo.webp"
 				preload
+				height="240"
+				densities="x1 x2"
 				loading="lazy"
 				class="mx-auto rounded-[50%] object-cover"
 				@click="navigateTo('#about')"
