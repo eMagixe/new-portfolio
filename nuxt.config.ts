@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
 	compatibilityDate: '2025-07-15',
 	css: ['~/assets/css/main.css'],
-	modules: ['@nuxt/ui', '@nuxtjs/i18n', '@nuxt/image'],
+	modules: ['@nuxt/ui', '@nuxtjs/i18n', '@nuxt/image', '@nuxtjs/fontaine'],
 	icon: {
 		serverBundle: 'local'
 	},
@@ -49,5 +49,27 @@ export default defineNuxtConfig({
 			{ code: 'ru', name: 'Русский', file: 'ru.json' },
 			{ code: 'en', name: 'English', file: 'en.json' }
 		]
+	},
+	routeRules: {
+		'/_nuxt/**': {
+			headers: {
+				'cache-control': 'public, max-age=31536000, immutable'
+			}
+		},
+		'/images/**': {
+			headers: {
+				'cache-control': 'public, max-age=31536000, immutable'
+			}
+		},
+		'/_fonts/**': {
+			headers: {
+				'cache-control': 'public, max-age=31536000, immutable'
+			}
+		},
+		'/favicon.ico': {
+			headers: {
+				'cache-control': 'public, max-age=604800'
+			}
+		}
 	}
 })
